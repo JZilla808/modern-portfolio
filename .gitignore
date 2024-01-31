@@ -18,6 +18,8 @@
 # misc
 .DS_Store
 *.pem
+*.log
+*.sqlite
 
 # debug
 npm-debug.log*
@@ -34,3 +36,28 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# sanity
+/sanity
+/sanity/node_modules
+/sanity/.env*
+/sanity/.gitignore
+/sanity/yarn.lock
+/sanity/package-lock.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnail cache files
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
