@@ -30,7 +30,7 @@ To run this project locally:
 
 1. Clone the repository:
    ```
-   git clone [repository-url]
+   gh repo clone JZilla808/modern-portfolio
    ```
 2. Install dependencies:
    ```
