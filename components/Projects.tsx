@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 type Props = {};
 
-// hi, i'm making my portfolio site according to my resume, how do i modify my code so that my projects page shows my projects? the Project type should be an object that has and image, a title and a description. Here are my projects:
 function Projects({}: Props) {
   const projects = [1, 2, 3, 4, 5];
 
