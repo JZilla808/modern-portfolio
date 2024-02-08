@@ -13,28 +13,27 @@ type Project = {
 
 const projectsList: Project[] = [
   {
-    imageUrl:
-      "/project_thumbnails/chasegpt_demo.gif", // Replace with actual image path
+    imageUrl: "/project_thumbnails/chasegpt_demo.gif",
     title: "ChatGPT Clone (ChaseGPT)",
     description: "A modern, responsive full-stack web app inspired by ChatGPT.",
     link: "https://www.chasegpt.com/",
   },
   {
-    imageUrl: "/project_thumbnails/image_generator.gif", // Replace with actual image path
+    imageUrl: "/project_thumbnails/image_generator.gif",
     title: "ChatGPT AI Image Generator",
     description:
       "A full-stack web app that utilizes the microservices architecture to generate images based on user prompts.",
     link: "https://image.chasegpt.com/",
   },
   {
-    imageUrl: "/project_thumbnails/weather_app.gif", // Replace with actual image path
+    imageUrl: "/project_thumbnails/weather_app.gif",
     title: "ChatGPT Powered Weather App",
     description:
       "A comprehensive weather app with AI-powered weather forecasts.",
     link: "https://chasegpt-ai-weather-app.vercel.app/",
   },
   {
-    imageUrl: "path_to_spotify_clone_image.png", // Replace with actual image path
+    imageUrl: "/project_thumbnails/chunespot_demo.gif",
     title: "Spotify Clone (ChuneSpot)",
     description:
       "A full-stack music streaming app with authentication, built-in audio player, uploads, likes, search, payments and subscriptions.",
