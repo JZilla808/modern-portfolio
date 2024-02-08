@@ -14,7 +14,7 @@ type Project = {
 const projectsList: Project[] = [
   {
     imageUrl:
-      "https://cdn.sanity.io/images/ltuexkre/production/af7ca99b5a796d0698cf9121a4a0795b5022b6be-666x375.png", // Replace with actual image path
+      "/project_thumbnails/chasegpt_demo.gif", // Replace with actual image path
     title: "ChatGPT Clone (ChaseGPT)",
     description: "A modern, responsive full-stack web app inspired by ChatGPT.",
     link: "https://www.chasegpt.com/",
