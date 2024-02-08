@@ -33,7 +33,7 @@ const projectsList: Project[] = [
     link: "https://chasegpt-ai-weather-app.vercel.app/",
   },
   {
-    imageUrl: "/project_thumbnails/chunespot_demo.gif",
+    imageUrl: "",
     title: "Spotify Clone (ChuneSpot)",
     description:
       "A full-stack music streaming app with authentication, built-in audio player, uploads, likes, search, payments and subscriptions.",
