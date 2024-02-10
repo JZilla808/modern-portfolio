@@ -40,7 +40,7 @@ const projectsList: Project[] = [
     link: "https://www.chunespot.com/",
   },
   {
-    imageUrl: "path_to_twitter_clone_image.png", // Replace with actual image path
+    imageUrl: "/project_thumbnails/tweepia_demo.gif", // Replace with actual image path
     title: "Twitter Clone (Tweepia)",
     description:
       "A full-stack Twitter-inspired web app that features user authentication, real-time microblogging, image uploads, and hot toast notifications.",
