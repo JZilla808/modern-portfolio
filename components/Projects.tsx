@@ -40,21 +40,21 @@ const projectsList: Project[] = [
     link: "https://www.chunespot.com/",
   },
   {
-    imageUrl: "/project_thumbnails/tweepia_demo.gif", 
+    imageUrl: "/project_thumbnails/tweepia_demo.gif",
     title: "Twitter Clone (Tweepia)",
     description:
       "A full-stack Twitter-inspired web app that features user authentication, real-time microblogging, image uploads, and hot toast notifications.",
     link: "https://www.tweepia.com/",
   },
   {
-    imageUrl: "/project_thumbnails/ngflix_demo.gif", 
+    imageUrl: "/project_thumbnails/ngflix_demo.gif",
     title: "Netflix-Inspired Site",
     description:
       "A pure client-side rendering movie and TV show information site with real-time data, search functionality, video player, similar shows, and pagination.",
     link: "https://ng-flix-jade.vercel.app/",
   },
   {
-    imageUrl: "path_to_spacex_clone_image.png", // Replace with actual image path
+    imageUrl: "/project_thumbnails/spacex_clone_demo.gif", // Replace with actual image path spacex_clone_demo
     title: "SpaceX Clone",
     description:
       "A detailed replication of the official SpaceX website, created using pure HTML, CSS, and JavaScript.",
