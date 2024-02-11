@@ -54,14 +54,14 @@ const projectsList: Project[] = [
     link: "https://ng-flix-jade.vercel.app/",
   },
   {
-    imageUrl: "/project_thumbnails/spacex_clone_demo.gif", // Replace with actual image path spacex_clone_demo
+    imageUrl: "/project_thumbnails/spacex_clone_demo.gif",
     title: "SpaceX Clone",
     description:
       "A detailed replication of the official SpaceX website, created using pure HTML, CSS, and JavaScript.",
     link: "https://spacex-clone-kappa.vercel.app/",
   },
   {
-    imageUrl: "path_to_instagram_clone_image.png", // Replace with actual image path
+    imageUrl: "/project_thumbnails/instagramapp_demo.gif",
     title: "Instagram Clone",
     description:
       "A full-stack web app inspired by Instagram. It includes features such as real-time updates, image uploads, and guest login.",
