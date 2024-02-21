@@ -68,14 +68,14 @@ const projectsList: Project[] = [
     link: "https://instagramapp-mauve.vercel.app/",
   },
   {
-    imageUrl: "/project_thumbnails/golang_bookings_demo.gif", // Replace with actual image path
+    imageUrl: "/project_thumbnails/golang_bookings_demo.gif",
     title: "Go Web App for Bookings (Bookings)",
     description:
       "A fast loading full-stack website for bookings and reservations. Built without using any front-end frameworks.",
     link: "https://golangbookings.jayzhou.work/",
   },
   {
-    imageUrl: "/project_thumbnails/instagramapp_demo.gif", // Replace with actual image path
+    imageUrl: "/project_thumbnails/supabolo_demo.gif",
     title: "E-commerce Site (Supabolo Clothing)",
     description:
       "An e-commerce site with a minimalist design that features authentication, advanced state management, and Stripe integration for payments.",
