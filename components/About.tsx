@@ -27,7 +27,7 @@ export default function About({}: Props) {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         src="/portraitFull.jpg"
-        className="-mb-20 mt-12 md:mb-0 md:mt-0 flex-shrink-0 sm:w-56 sm:h-56 rounded-full object-cover  md:rounded-lg s8:w-48 s8:h-48 md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
+        className="-mb-20 mt-12 md:mb-0 md:mt-10 flex-shrink-0 sm:w-56 sm:h-56 rounded-full object-cover  md:rounded-lg s8:w-48 s8:h-48 md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
       />
 
       <div className="space-y-10 px-0 md:px-10">

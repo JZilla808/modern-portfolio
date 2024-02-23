@@ -18,10 +18,11 @@ interface Props {
 function ExperienceCard({ experienceItems }: Props) {
   return (
     <>
+      {/* TODO: Make the card smaller */}
       {experienceItems.map((item, index) => (
         <article
           key={index}
-          className="flex flex-col rounded-1 items-center space-y-7 flex-shrink-0 s8:w-[90vw] sm:w-[450px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] s8:p-7 12pro:p-10 hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden"
+          className="flex flex-col rounded-1 items-center space-y-7 flex-shrink-0 s8:w-[90vw] sm:w-[450px] md:w-[550px] xl:w-[650px] h-[70vh] snap-center bg-[#292929] s8:p-7 12pro:p-10 hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden"
         >
           {/* TODO: Add arrows for scrolling through experience items */}
 
@@ -39,7 +40,7 @@ function ExperienceCard({ experienceItems }: Props) {
               y: 0,
             }}
             viewport={{ once: true }}
-            className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+            className="w-32 h-32 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
             src={item.employerLogo}
             alt=""
           />

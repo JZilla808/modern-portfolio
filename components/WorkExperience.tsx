@@ -40,7 +40,7 @@ const experienceItems = [
     ],
   },
   {
-    employerLogo: "/experiences/surefire.png",
+    employerLogo: "/experiences/gesoo.jpg",
     title: "UX/UI Designer",
     text: "Gesoo.com",
     startDate: "Jun 2018",
