@@ -18,7 +18,7 @@ const experienceItems = [
     ],
   },
   {
-    employerLogo: "/experiences/cnc.jpg",
+    employerLogo: "/experiences/ark.webp",
     title: "System Administrator",
     text: "Ark Information Consulting",
     startDate: "Mar 2015",
@@ -51,15 +51,25 @@ const experienceItems = [
     ],
   },
   {
-    employerLogo: "/experiences/surefire.png",
+    employerLogo: "/experiences/carinfo.png",
+    title: "Co-founder",
+    text: "Car Information Station",
+    startDate: "Mar 2020",
+    endDate: "Oct 2021",
+    summaryPoints: [
+      "Co-founded a media company serving top car dealerships in LA, specializing in music and car video production.",
+      "Led the creative direction, including logo design, beat production, video shooting, and editing.",
+    ],
+  },
+  {
+    employerLogo: "/experiences/surefire2.png",
     title: "Founder & CEO",
     text: "Surefire Production",
-    startDate: "Mar 2020",
+    startDate: "Oct 2021",
     endDate: "Present",
     summaryPoints: [
-      "Solopreneur of a multimedia and web production company.",
-      "Specializes in creating music, beats, and websites for clients, with a focus on innovative and creative solutions.",
-      "Successfully managed projects and client relations, achieving a 95% client satisfaction rate.",
+      "Founded and operate a multimedia and web production company, specializing in music, beats, and web solutions for clients.",
+      "Successfully managed projects and client relations, achieving a 95% client satisfaction rate with innovative and creative solutions.",
     ],
   },
 ];
