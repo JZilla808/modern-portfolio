@@ -4,6 +4,66 @@ import ExperienceCard from "./ExperienceCard";
 
 type Props = {};
 
+// TODO: Update work experience, add employer logos in square format
+const experienceItems = [
+  {
+    employerLogo: "/experiences/cnc.jpg",
+    title: "IT Specialist",
+    text: "CNC Motors",
+    startDate: "Feb 2013",
+    endDate: "Mar 2015",
+    summaryPoints: [
+      "Managed company's IT infrastructure, improving system efficiency by 30%.",
+      "Provided technical support and training to staff, enhancing overall tech literacy.",
+    ],
+  },
+  {
+    employerLogo: "/experiences/cnc.jpg",
+    title: "System Administrator",
+    text: "Ark Information Consulting",
+    startDate: "Mar 2015",
+    endDate: "Jun 2016",
+    summaryPoints: [
+      "Administered network and system operations, ensuring 99.9% uptime.",
+      "Implemented data backups and security protocols, reducing data loss incidents.",
+    ],
+  },
+  {
+    employerLogo: "/experiences/surefire.png",
+    title: "Manager/System Administrator",
+    text: "Eastern Spice Inc.",
+    startDate: "Jun 2016",
+    endDate: "Jun 2018",
+    summaryPoints: [
+      "Oversaw IT systems and managed a team of 5, improving workflow efficiency.",
+      "Enhanced system security and performed regular maintenance, ensuring smooth operations.",
+    ],
+  },
+  {
+    employerLogo: "/experiences/surefire.png",
+    title: "UX/UI Designer",
+    text: "Gesoo.com",
+    startDate: "Jun 2018",
+    endDate: "Jul 2020",
+    summaryPoints: [
+      "Designed intuitive user interfaces, increasing user engagement by 40%.",
+      "Collaborated with developers to implement designs, ensuring consistency and functionality.",
+    ],
+  },
+  {
+    employerLogo: "/experiences/surefire.png",
+    title: "Founder & CEO",
+    text: "Surefire Production",
+    startDate: "Mar 2020",
+    endDate: "Present",
+    summaryPoints: [
+      "Solopreneur of a multimedia and web production company.",
+      "Specializes in creating music, beats, and websites for clients, with a focus on innovative and creative solutions.",
+      "Successfully managed projects and client relations, achieving a 95% client satisfaction rate.",
+    ],
+  },
+];
+
 function WorkExperience({}: Props) {
   return (
     <motion.div
@@ -17,10 +77,11 @@ function WorkExperience({}: Props) {
       </h3>
 
       <div className="w-full flex s8:mt-20 12pro:mt-16 space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+        {/* <ExperienceCard />
         <ExperienceCard />
         <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
+        <ExperienceCard /> */}
+        <ExperienceCard experienceItems={experienceItems} />
       </div>
     </motion.div>
   );
