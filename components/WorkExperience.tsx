@@ -29,7 +29,7 @@ const experienceItems = [
     ],
   },
   {
-    employerLogo: "/experiences/surefire.png",
+    employerLogo: "/experiences/easternspice.jpg",
     title: "Manager/System Administrator",
     text: "Eastern Spice Inc.",
     startDate: "Jun 2016",
