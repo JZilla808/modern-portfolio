@@ -18,15 +18,11 @@ interface Props {
 function ExperienceCard({ experienceItems }: Props) {
   return (
     <>
-      {/* TODO: Make the card smaller */}
       {experienceItems.map((item, index) => (
         <article
           key={index}
           className="flex flex-col rounded-1 items-center space-y-7 flex-shrink-0 s8:w-[90vw] sm:w-[450px] md:w-[550px] xl:w-[650px] h-[70vh] snap-center bg-[#292929] s8:p-7 12pro:p-10 hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden"
         >
-          {/* TODO: Add arrows for scrolling through experience items */}
-
-          {/* Add top margin for the employer logo */}
           <motion.img
             initial={{
               y: -100,

@@ -4,7 +4,6 @@ import ExperienceCard from "./ExperienceCard";
 
 type Props = {};
 
-// TODO: Update work experience, add employer logos in square format
 const experienceItems = [
   {
     employerLogo: "/experiences/cnc.jpg",
@@ -87,10 +86,6 @@ function WorkExperience({}: Props) {
       </h3>
 
       <div className="w-full flex s8:mt-20 12pro:mt-16 space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        {/* <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard /> */}
         <ExperienceCard experienceItems={experienceItems} />
       </div>
     </motion.div>
