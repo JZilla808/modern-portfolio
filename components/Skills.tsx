@@ -7,98 +7,82 @@ type Props = {};
 const skillList = [
   {
     name: "JavaScript",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/javascript.png",
     proficiency: "90%",
   },
   {
     name: "HTML",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/html.png",
     proficiency: "90%",
   },
   {
     name: "CSS",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/css.png",
     proficiency: "90%",
   },
   {
     name: "React",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/react.png",
     proficiency: "85%",
   },
   {
     name: "TypeScript",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/typescript.png",
     proficiency: "85%",
   },
   {
     name: "Angular",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/angular.png",
     proficiency: "75%",
   },
   {
     name: "Vue",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/vue.png",
     proficiency: "85%",
   },
   {
     name: "Git",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/git.png",
     proficiency: "90%",
   },
   {
     name: "Node.js",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/nodejs.png",
     proficiency: "70%",
   },
   {
     name: "Express.js",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/express.jpg",
     proficiency: "70%",
   },
   {
     name: "React Native",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/react.png",
     proficiency: "65%",
   },
   {
     name: "MongoDB",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/mongodb.png",
     proficiency: "60%",
   },
   {
     name: "Python",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/python.ico",
     proficiency: "70%",
   },
   {
     name: "Go",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/golang.png",
     proficiency: "60%",
   },
   {
     name: "Rust",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/rust.png",
     proficiency: "60%",
   },
   {
     name: "Solidity",
-    iconPath:
-      "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_96102ac6497377cd53da621075fe828e/sanity.png",
+    iconPath: "/skills/solidity.png",
     proficiency: "50%",
   },
 ];
