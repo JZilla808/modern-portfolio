@@ -26,12 +26,12 @@ export default function Header({}: Props) {
       >
         {/* TODO: Link my Social Icons */}
         <SocialIcon
-          url="https://youtube.com/jzilla808"
+          url="https://github.com/JZilla808"
           fgColor="gray"
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://youtube.com/jzilla808"
+          url="https://twitter.com/jayzhoupro"
           fgColor="gray"
           bgColor="transparent"
         />

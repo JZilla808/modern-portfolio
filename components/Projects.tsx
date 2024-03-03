@@ -136,11 +136,7 @@ function Projects({}: Props) {
                 viewport={{ once: true }}
                 src={projects[i].imageUrl}
                 alt=""
-                style={{
-                  maxWidth: "500px",
-                  maxHeight: "500px",
-                  objectFit: "cover",
-                }}
+                className="max-w-xs max-h-xs sm:max-w-sm sm:max-h-sm md:max-w-md md:max-h-md lg:max-w-lg lg:max-h-lg xl:max-w-xl xl:max-h-xl 2xl:max-w-2xl 2xl:max-h-2xl object-cover"
               />
             </a>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
@@ -157,7 +153,7 @@ function Projects({}: Props) {
                 </h4>
               </a>
 
-              <p className="s8:text-base 12pro:text-lg md:text-left text-center">
+              <p className="s8:text-base 12pro:text-lg text-center">
                 {projects[i].description}
               </p>
             </div>

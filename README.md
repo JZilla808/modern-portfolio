@@ -1,7 +1,7 @@
 
 # Modern Portfolio Website
 
-Welcome to my modern portfolio website, a vibrant and interactive showcase of my skills and projects as a front-end and full-stack developer. This portfolio is designed to highlight my expertise in web development, showcasing my proficiency in a variety of modern technologies.
+Welcome to my modern portfolio website, a vibrant and interactive showcase of my skills and projects as a front-end and full-stack developer. This portfolio is designed to highlight my expertise in web development, showcasing my proficiency in a variety of modern technologies. It also features smooth animations, enhancing the user experience and adding a dynamic touch to the presentation of my work.
 
 ## Technologies Used
 

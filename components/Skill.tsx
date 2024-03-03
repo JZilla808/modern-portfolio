@@ -22,11 +22,11 @@ function Skill({
         transition={{ duration: 1 }}
         src={iconPath}
         alt={name}
-        className="rounded-full border border-gray-500 object-cover s8:w-16 s8:h-16 12pro:w-20 12pro:h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-200 ease-in-out bg-white object-contain"
+        className="rounded-full border border-gray-500 object-cover s8:w-12 s8:h-12 12pro:w-16 12pro:h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-200 ease-in-out bg-white object-contain"
       />
-      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-200 ease-in-out group-hover:bg-white s8:w-16 s8:h-16 12pro:w-20 12pro:h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-full z-0 ">
+      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-200 ease-in-out group-hover:bg-white s8:w-12 s8:h-12 12pro:w-16 12pro:h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 xl:w-28 xl:h-28 rounded-full z-0 ">
         <div className="flex items-center justify-center h-full">
-          <p className="s8:text-sm 12pro:text-sm sm:text-xl md:text-2xl font-bold text-black opacity-100 text-center ">
+          <p className="s8:text-sm 12pro:text-sm sm:text-xl md:text-xl font-bold text-black opacity-100 text-center ">
             {name}
           </p>
         </div>
