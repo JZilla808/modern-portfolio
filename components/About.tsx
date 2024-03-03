@@ -15,7 +15,6 @@ export default function About({}: Props) {
         About
       </h3>
 
-      {/* TODO: UPDATE PICTURE */}
       <motion.img
         initial={{
           x: -200,

@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Skill from "./Skill";
 
 type Props = {};
-// TODO: Add a list of skills, including the skill name, icon path and proficiency level
 const skillList = [
   {
     name: "JavaScript",

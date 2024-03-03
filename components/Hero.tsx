@@ -21,7 +21,6 @@ export default function Hero({}: Props) {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
-      {/* TODO: upload portrait to sanity.io and use next/image to render it */}
       <img
         className="relative 
       h-36 w-36 mx-auto rounded-full object-cover
