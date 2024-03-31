@@ -36,17 +36,17 @@ export default function About({}: Props) {
           background
         </h4>
         <p className="s8:text-sm 12pro:text-base text-justify">
-          Greetings, I'm Jay, a Los Angeles-based full stack developer and music
-          producer with a burning passion for leveraging technology to empower
-          artists. 🌟 Driven by the desire to make a difference, I've honed my
-          skills in a wide array of languages and frameworks, including HTML,
-          CSS, JavaScript, TypeScript, Python, Go, Rust, React, Next.js, and
-          more. My unique blend of technical expertise and creative vision
-          allows me to craft innovative solutions that bridge the gap between
-          art and technology. 💻🎵 With a keen eye for detail and a commitment
-          to excellence, I'm ready to contribute my skills to a forward-thinking
-          team and create groundbreaking digital experiences. Let's collaborate
-          and bring your vision to life! 🚀
+          Greetings, I&apos;m Jay, a Los Angeles-based full stack developer and
+          music producer with a burning passion for leveraging technology to
+          empower artists. 🌟 Driven by the desire to make a difference,
+          I&apos;ve honed my skills in a wide array of languages and frameworks,
+          including HTML, CSS, JavaScript, TypeScript, Python, Go, Rust, React,
+          Next.js, and more. My unique blend of technical expertise and creative
+          vision allows me to craft innovative solutions that bridge the gap
+          between art and technology. 💻🎵 With a keen eye for detail and a
+          commitment to excellence, I&apos;m ready to contribute my skills to a
+          forward-thinking team and create groundbreaking digital experiences.
+          Let&apos;s collaborate and bring your vision to life! 🚀
         </p>
       </div>
     </motion.div>
