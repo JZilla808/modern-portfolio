@@ -40,7 +40,7 @@ const experienceItems = [
   },
   {
     employerLogo: "/experiences/gesoo.jpg",
-    title: "UX/UI Designer",
+    title: "Front End Developer",
     text: "Gesoo.com",
     startDate: "Jun 2018",
     endDate: "Jul 2020",
@@ -62,7 +62,7 @@ const experienceItems = [
   },
   {
     employerLogo: "/experiences/surefire2.png",
-    title: "Founder & CEO",
+    title: "Founder & Full Stack Developer",
     text: "Surefire Production",
     startDate: "Oct 2021",
     endDate: "Present",
