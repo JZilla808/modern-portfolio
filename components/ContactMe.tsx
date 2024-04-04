@@ -15,7 +15,7 @@ function ContactMe({}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
   // TODO: send email from backend using services like EmailJS
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:jayzhoupro@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. My email is ${formData.email}. ${formData.message}`;
+    window.location.href = `mailto:contact@jayzhou.work?subject=${formData.subject}&body=Hi, my name is ${formData.name}. My email is ${formData.email}. ${formData.message}`;
   };
 
   return (
@@ -40,7 +40,7 @@ function ContactMe({}: Props) {
 
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="s8:text-xl 12pro:text-2xl">jayzhoupro@gmail.com</p>
+            <p className="s8:text-xl 12pro:text-2xl">contact@jayzhou.work</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
