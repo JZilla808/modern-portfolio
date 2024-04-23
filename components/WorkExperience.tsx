@@ -51,13 +51,13 @@ const experienceItems = [
   },
   {
     employerLogo: "/experiences/carinfo.png",
-    title: "Co-founder",
+    title: "Creative Director",
     text: "Car Information Station",
     startDate: "Mar 2020",
     endDate: "Oct 2021",
     summaryPoints: [
-      "Co-founded a media company serving top car dealerships in LA, specializing in music and car video production.",
-      "Led the creative direction, including logo design, beat production, video shooting, and editing.",
+      "Spearheaded the establishment of a media company serving top car dealerships in LA, specializing in music and car video production.",
+      "Directed all aspects of creative work, from conceptualizing the brand identity and designing the logo to producing beats and overseeing video production and editing.",
     ],
   },
   {
