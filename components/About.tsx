@@ -38,7 +38,9 @@ export default function About({}: Props) {
         <p className="s8:text-sm 12pro:text-base text-justify">
           Greetings, I&apos;m Jay, a Los Angeles-based full stack developer and
           music producer with a burning passion for leveraging technology to
-          empower artists. 🌟 Driven by the desire to make a difference,
+          empower artists. 🌟 As a US citizen, I&apos;m fully authorized to work in
+          the United States and am eager to contribute my skills to innovative
+          and forward-thinking teams. Driven by the desire to make a difference,
           I&apos;ve honed my skills in a wide array of languages and frameworks,
           including HTML, CSS, JavaScript, TypeScript, Python, Go, Rust, React,
           Next.js, and more. My unique blend of technical expertise and creative
