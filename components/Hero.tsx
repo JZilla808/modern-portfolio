@@ -45,9 +45,11 @@ export default function Hero({}: Props) {
           <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
-          <Link href="#experience">
-            <button className="heroButton">Experience</button>
-          </Link>
+          <div className="skill-container hidden landscape:max-h-[500px]:lg:block lg:block portrait:md:block">
+            <Link href="#experience">
+              <button className="heroButton">Experience</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

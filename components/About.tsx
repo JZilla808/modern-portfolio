@@ -11,7 +11,7 @@ export default function About({}: Props) {
       transition={{ duration: 2 }}
       className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl sm:px-10 s8:px-6 justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] mr-[-20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] mr-[-20px] text-gray-500 text-2xl landscape:s8:hidden">
         About
       </h3>
 
@@ -38,17 +38,17 @@ export default function About({}: Props) {
         <p className="s8:text-sm 12pro:text-base text-justify">
           Greetings, I&apos;m Jay, a Los Angeles-based full stack developer and
           music producer with a burning passion for leveraging technology to
-          empower artists. 🌟 As a US citizen, I&apos;m fully authorized to work in
-          the United States and am eager to contribute my skills to innovative
-          and forward-thinking teams. Driven by the desire to make a difference,
-          I&apos;ve honed my skills in a wide array of languages and frameworks,
-          including HTML, CSS, JavaScript, TypeScript, Python, Go, Rust, React,
-          Next.js, and more. My unique blend of technical expertise and creative
-          vision allows me to craft innovative solutions that bridge the gap
-          between art and technology. 💻🎵 With a keen eye for detail and a
-          commitment to excellence, I&apos;m ready to contribute my skills to a
-          forward-thinking team and create groundbreaking digital experiences.
-          Let&apos;s collaborate and bring your vision to life! 🚀
+          empower artists. 🌟 As a US citizen, I&apos;m fully authorized to work
+          in the United States and am eager to contribute my skills to
+          innovative and forward-thinking teams. Driven by the desire to make a
+          difference, I&apos;ve honed my skills in a wide array of languages and
+          frameworks, including HTML, CSS, JavaScript, TypeScript, Python, Go,
+          Rust, React, Next.js, and more. My unique blend of technical expertise
+          and creative vision allows me to craft innovative solutions that
+          bridge the gap between art and technology. 💻🎵 With a keen eye for
+          detail and a commitment to excellence, I&apos;m ready to contribute my
+          skills to a forward-thinking team and create groundbreaking digital
+          experiences. Let&apos;s collaborate and bring your vision to life! 🚀
         </p>
       </div>
     </motion.div>

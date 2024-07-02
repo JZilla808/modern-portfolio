@@ -94,22 +94,24 @@ function Skills({}: Props) {
       transition={{ duration: 1.5 }}
       className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] mr-[-20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] mr-[-20px] text-gray-500 text-2xl landscape:s8:hidden">
         Skills
       </h3>
 
-      <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
+      <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm landscape:s8:hidden">
         Hover over a skill for more info
       </h3>
 
-      <div className="grid grid-cols-4 gap-5 mt-[15rem] xl:mt-[20rem]">
+      <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-4 sm:gap-2 mt-20 sm:mt-24 md:mt-28 xl:mt-32 w-full max-w-6xl px-4">
         {skillList.map((skill, index) => (
-          <Skill
-            key={index}
-            name={skill.name}
-            iconPath={skill.iconPath}
-            proficiency={skill.proficiency}
-          />
+          <div key={index} className="flex items-center justify-center">
+            <Skill
+              name={skill.name}
+              iconPath={skill.iconPath}
+              proficiency={skill.proficiency}
+              directionDown={index % 2 === 0}
+            />
+          </div>
         ))}
       </div>
     </motion.div>

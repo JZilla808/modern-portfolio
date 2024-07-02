@@ -17,12 +17,12 @@ function Skill({
   return (
     <div className="group relative flex cursor-pointer">
       <motion.img
-        initial={{ y: directionDown ? -200 : 200, opacity: 0 }}
+        initial={{ y: directionDown ? -150 : 150, opacity: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         src={iconPath}
         alt={name}
-        className="rounded-full border border-gray-500 object-cover s8:w-12 s8:h-12 12pro:w-16 12pro:h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-200 ease-in-out bg-white object-contain"
+        className="rounded-full border border-gray-500 object-cover s8:w-10 s8:h-10 12pro:w-14 12pro:h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-200 ease-in-out bg-white object-contain"
       />
       <div className="absolute opacity-0 group-hover:opacity-80 transition duration-200 ease-in-out group-hover:bg-white s8:w-12 s8:h-12 12pro:w-16 12pro:h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 xl:w-28 xl:h-28 rounded-full z-0 ">
         <div className="flex items-center justify-center h-full">

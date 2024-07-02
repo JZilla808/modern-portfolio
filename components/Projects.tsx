@@ -102,9 +102,9 @@ function Projects({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen relative flex flex-col overflow-hidden text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className="h-screen relative flex flex-col overflow-hidden text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 "
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] mr-[-20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] mr-[-20px] text-gray-500 text-2xl landscape:s8:hidden">
         Projects
       </h3>
 
@@ -122,7 +122,7 @@ function Projects({}: Props) {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen  "
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-3 sm:space-y-5 items-center justify-center p-4 sm:p-8 md:p-20 lg:p-44 h-screen"
           >
             <a
               href={projects[i].link}
@@ -130,22 +130,22 @@ function Projects({}: Props) {
               rel="noopener noreferrer"
             >
               <motion.img
-                initial={{ y: -200, opacity: 0 }}
-                transition={{ duration: 1.2 }}
+                initial={{ y: -100, opacity: 0 }}
+                transition={{ duration: 1 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 src={projects[i].imageUrl}
                 alt=""
-                className="max-w-xs max-h-xs sm:max-w-sm sm:max-h-sm md:max-w-md md:max-h-md lg:max-w-lg lg:max-h-lg xl:max-w-xl xl:max-h-xl 2xl:max-w-2xl 2xl:max-h-2xl object-cover"
+                className="max-w-[200px] max-h-[200px] portrait:max-w-[350px] portrait:max-h-[300px] sm:max-w-[150px] sm:max-h-[150px] md:max-w-[300px] md:max-h-[300px] lg:max-w-[400px] lg:max-h-[400px] xl:max-w-[500px] xl:max-h-[500px] 2xl:max-w-[600px] 2xl:max-h-[600px] object-cover"
               />
             </a>
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+            <div className="space-y-3 sm:space-y-5 px-2 sm:px-4 md:px-10 max-w-6xl">
               <a
                 href={projects[i].link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <h4 className="s8:text-xl 12pro:text-2xl sm:text-4xl font-semibold text-center">
+                <h4 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-center">
                   <span className="underline decoration-[#F7AB0A]/50">
                     Project {i + 1} of {projects.length}:
                   </span>{" "}
@@ -153,7 +153,7 @@ function Projects({}: Props) {
                 </h4>
               </a>
 
-              <p className="s8:text-base 12pro:text-lg text-center">
+              <p className="text-sm sm:text-base md:text-lg text-center">
                 {projects[i].description}
               </p>
             </div>

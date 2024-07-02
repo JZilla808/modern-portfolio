@@ -21,7 +21,7 @@ function ExperienceCard({ experienceItems }: Props) {
       {experienceItems.map((item, index) => (
         <article
           key={index}
-          className="flex flex-col rounded-1 items-center space-y-7 flex-shrink-0 s8:w-[90vw] sm:w-[450px] md:w-[550px] xl:w-[650px] h-[70vh] snap-center bg-[#292929] s8:p-7 12pro:p-10 hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden"
+          className="flex flex-col rounded-1 items-center space-y-7 flex-shrink-0 s8:w-[90vw] sm:w-[450px] md:w-[550px] xl:w-[650px] h-[70vh] snap-center bg-[#292929] s8:p-7 12pro:p-10 hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden text-center"
         >
           <motion.img
             initial={{
@@ -46,13 +46,14 @@ function ExperienceCard({ experienceItems }: Props) {
               {item.title}
             </h4>
             <p className="font-bold s8:text-xl md:text-2xl mt-1">{item.text}</p>
-            <div className="flex space-x-2 my-2">
+            <div className="flex justify-center space-x-2 my-2">
               {item.icons &&
                 item.icons.map((icon, index) => (
                   <img
                     key={index}
                     className="h-10 w-10 rounded-full"
                     src={icon}
+                    alt=""
                   />
                 ))}
             </div>
@@ -61,7 +62,7 @@ function ExperienceCard({ experienceItems }: Props) {
             </p>
 
             <div className="h-52 md:h-64 xl:h-72 overflow-y-auto scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-              <ul className="list-disc space-y-4 ml-5 s8:text-sm sm:text-base md:text-lg">
+              <ul className="list-disc space-y-4 ml-5 s8:text-sm sm:text-base md:text-lg text-left">
                 {item.summaryPoints.map((point, index) => (
                   <li key={index}>{point}</li>
                 ))}
