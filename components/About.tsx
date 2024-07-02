@@ -11,7 +11,7 @@ export default function About({}: Props) {
       transition={{ duration: 2 }}
       className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl sm:px-10 s8:px-6 justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] mr-[-20px] text-gray-500 text-2xl landscape:s8:hidden">
+      <h3 className="absolute top-24 uppercase tracking-[20px] mr-[-20px] text-gray-500 text-2xl landscape:s8:hidden portrait:s8:hidden">
         About
       </h3>
 
