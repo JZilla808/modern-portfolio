@@ -61,7 +61,7 @@ function ExperienceCard({ experienceItems }: Props) {
               {item.startDate} - {item.endDate}
             </p>
 
-            <div className="h-52 md:h-64 xl:h-72 overflow-y-auto scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+            <div className="overflow-y-auto scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
               <ul className="list-disc space-y-4 ml-5 s8:text-sm sm:text-base md:text-lg text-left">
                 {item.summaryPoints.map((point, index) => (
                   <li key={index}>{point}</li>

@@ -71,7 +71,17 @@ const experienceItems = [
       "Successfully managed projects and client relations, achieving a 95% client satisfaction rate with innovative and creative solutions.",
     ],
   },
-  // TODO: Add experience with MagicQR
+  {
+    employerLogo: "/experiences/magicqr.jpg",
+    title: "Software Engineer",
+    text: "MagicQR Inc.",
+    startDate: "Jun 2024",
+    endDate: "Apr 2025",
+    summaryPoints: [
+      "Led the development of a secure QR-based event platform, enabling seamless orders and attendee verification.",
+      "Implemented robust security and optimized performance for high adoption at live events.",
+    ],
+  },
 ];
 
 function WorkExperience({}: Props) {
@@ -89,7 +99,7 @@ function WorkExperience({}: Props) {
         </h3>
 
         <div className="w-full flex s8:mt-20 12pro:mt-16 space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-          <ExperienceCard experienceItems={experienceItems} />
+          <ExperienceCard experienceItems={[...experienceItems].reverse()} />
         </div>
       </motion.div>
     </div>
