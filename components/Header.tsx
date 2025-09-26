@@ -35,7 +35,7 @@ export default function Header({}: Props) {
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://twitter.com/jayzhoupro"
+          url="https://x.com/jayzhoupro"
           fgColor="gray"
           bgColor="transparent"
         />
