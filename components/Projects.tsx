@@ -13,6 +13,13 @@ type Project = {
 
 const projectsList: Project[] = [
   {
+    imageUrl: "/project_thumbnails/fayva_demo.gif",
+    title: "Digital Ordering Platform (Fayva)",
+    description:
+      "Architected Fayva's QR-powered ordering platform with real-time menus, payments, dashboards, and AI-driven personalization.",
+    link: "https://fayvanow.com/",
+  },
+  {
     imageUrl: "/project_thumbnails/chasegpt_demo.gif",
     title: "ChatGPT Clone (ChaseGPT)",
     description: "A modern, responsive full-stack web app inspired by ChatGPT.",
