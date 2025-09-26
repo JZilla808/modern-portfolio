@@ -30,7 +30,7 @@ export default function Header({}: Props) {
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://www.linkedin.com/in/jay-zhou-24a33a184"
+          url="https://www.linkedin.com/in/jay-zhou-1016832ba/"
           fgColor="gray"
           bgColor="transparent"
         />
