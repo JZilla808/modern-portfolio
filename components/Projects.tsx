@@ -180,7 +180,20 @@ function Projects({}: Props) {
           return;
         }
 
-        const hasRealSource = image.currentSrc === project.imageUrl;
+        const expectedSrc = (() => {
+          try {
+            if (typeof window !== "undefined") {
+              return new URL(project.imageUrl, window.location.origin).toString();
+            }
+            return project.imageUrl;
+          } catch {
+            return project.imageUrl;
+          }
+        })();
+
+        const attributeSrc = image.getAttribute("src");
+        const hasRealSource =
+          image.currentSrc === expectedSrc || attributeSrc === project.imageUrl;
         const hasDimensions = image.naturalWidth > 0 && image.naturalHeight > 0;
 
         if (hasRealSource && hasDimensions) {
@@ -299,7 +312,21 @@ function Projects({}: Props) {
                   decoding="async"
                   onLoad={(event) => {
                     const image = event.currentTarget;
-                    if (image.currentSrc !== projects[i].imageUrl) {
+                    const expectedSrc = (() => {
+                      try {
+                        return new URL(
+                          projects[i].imageUrl,
+                          image.baseURI ?? window.location.origin
+                        ).toString();
+                      } catch {
+                        return projects[i].imageUrl;
+                      }
+                    })();
+                    const attributeSrc = image.getAttribute("src");
+                    if (
+                      image.currentSrc !== expectedSrc &&
+                      attributeSrc !== projects[i].imageUrl
+                    ) {
                       return;
                     }
 
