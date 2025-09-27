@@ -24,7 +24,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
     "react-simple-typewriter": "^5.0.1",
-    "react-social-icons": "^5.15.0",
+    "react-social-icons": "^6.25.0",
     "typescript": "5.0.3"
   },
   "devDependencies": {
