@@ -96,6 +96,7 @@ function Projects({}: Props) {
   const [clearedIndexes, setClearedIndexes] = useState<Set<number>>(
     () => new Set([0, 1])
   );
+  const [loadedIndexes, setLoadedIndexes] = useState<Set<number>>(() => new Set());
 
   useEffect(() => {
     const container = projectListRef.current;
@@ -184,55 +185,85 @@ function Projects({}: Props) {
       >
         {projects.map((project, i) => {
           const shouldLoadImage = clearedIndexes.has(i);
+          const isImageLoaded = loadedIndexes.has(i);
+          const shouldShowLoader = shouldLoadImage && !isImageLoaded;
+          const shouldShowPoster = !isImageLoaded;
+          const basePosterClasses =
+            "absolute inset-0 rounded-xl bg-gray-950/50 backdrop-blur-sm flex items-center justify-center";
+          const posterClasses = shouldShowLoader
+            ? basePosterClasses
+            : `${basePosterClasses} animate-pulse`;
           const placeholderSrc =
             "data:image/gif;base64,R0lGODlhAQABAIAAAP///////ywAAAAAAQABAAACAkQBADs=";
 
           return (
-          <div
-            key={i}
-            data-index={i}
-            ref={(el) => {
-              cardRefs.current[i] = el;
-            }}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-3 sm:space-y-5 items-center justify-center p-4 sm:p-8 md:p-20 lg:p-44 h-screen"
-          >
-            <a
-              href={projects[i].link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative flex items-center justify-center"
+            <div
+              key={i}
+              data-index={i}
+              ref={(el) => {
+                cardRefs.current[i] = el;
+              }}
+              className="w-screen flex-shrink-0 snap-center flex flex-col space-y-3 sm:space-y-5 items-center justify-center p-4 sm:p-8 md:p-20 lg:p-44 h-screen"
             >
-              {!shouldLoadImage && (
-                <div
-                  className="absolute inset-0 rounded-xl bg-gray-800/30 animate-pulse"
-                  aria-hidden="true"
-                />
-              )}
-              <motion.img
-                initial={{ y: -100, opacity: 0 }}
-                transition={{ duration: 1 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                src={shouldLoadImage ? projects[i].imageUrl : placeholderSrc}
-                alt=""
-                loading={i <= 1 ? "eager" : "lazy"}
-                decoding="async"
-                className="max-w-[200px] max-h-[200px] portrait:max-w-[350px] portrait:max-h-[300px] sm:max-w-[150px] sm:max-h-[150px] md:max-w-[300px] md:max-h-[300px] lg:max-w-[400px] lg:max-h-[400px] xl:max-w-[500px] xl:max-h-[500px] 2xl:max-w-[600px] 2xl:max-h-[600px] object-cover"
-              />
-            </a>
-            <div className="space-y-3 sm:space-y-5 px-2 sm:px-4 md:px-10 max-w-6xl">
               <a
                 href={projects[i].link}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="relative flex items-center justify-center"
               >
-                <h4 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-center">
-                  <span className="underline decoration-[#F7AB0A]/50">
-                    Project {i + 1} of {projects.length}:
-                  </span>{" "}
-                  {projects[i].title}
-                </h4>
+                {shouldShowPoster && (
+                  <div className={posterClasses} aria-hidden={!shouldShowLoader}>
+                    {shouldShowLoader && (
+                      <>
+                        <span className="sr-only">Loading project preview…</span>
+                        <span
+                          aria-hidden="true"
+                          className="h-12 w-12 rounded-full border-4 border-[#F7AB0A]/70 border-t-transparent animate-spin"
+                        />
+                      </>
+                    )}
+                  </div>
+                )}
+                <motion.img
+                  initial={{ y: -100, opacity: 0 }}
+                  transition={{ duration: 1 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  src={shouldLoadImage ? projects[i].imageUrl : placeholderSrc}
+                  alt=""
+                  loading={i <= 1 ? "eager" : "lazy"}
+                  decoding="async"
+                  onLoad={() => {
+                    if (!shouldLoadImage) {
+                      return;
+                    }
+
+                    setLoadedIndexes((prev) => {
+                      if (prev.has(i)) {
+                        return prev;
+                      }
+
+                      const next = new Set(prev);
+                      next.add(i);
+                      return next;
+                    });
+                  }}
+                  className="max-w-[200px] max-h-[200px] portrait:max-w-[350px] portrait:max-h-[300px] sm:max-w-[150px] sm:max-h-[150px] md:max-w-[300px] md:max-h-[300px] lg:max-w-[400px] lg:max-h-[400px] xl:max-w-[500px] xl:max-h-[500px] 2xl:max-w-[600px] 2xl:max-h-[600px] object-cover"
+                />
               </a>
+              <div className="space-y-3 sm:space-y-5 px-2 sm:px-4 md:px-10 max-w-6xl">
+                <a
+                  href={projects[i].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h4 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-center">
+                    <span className="underline decoration-[#F7AB0A]/50">
+                      Project {i + 1} of {projects.length}:
+                    </span>{" "}
+                    {projects[i].title}
+                  </h4>
+                </a>
 
               <p className="text-sm sm:text-base md:text-lg text-center">
                 {projects[i].description}
