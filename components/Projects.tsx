@@ -339,6 +339,17 @@ function Projects({}: Props) {
                       next.add(i);
                       return next;
                     });
+
+                    setClearedIndexes((prev) => {
+                      const nextIndex = i + 1;
+                      if (nextIndex >= projects.length || prev.has(nextIndex)) {
+                        return prev;
+                      }
+
+                      const next = new Set(prev);
+                      next.add(nextIndex);
+                      return next;
+                    });
                   }}
                   className="max-w-[200px] max-h-[200px] portrait:max-w-[350px] portrait:max-h-[300px] sm:max-w-[150px] sm:max-h-[150px] md:max-w-[300px] md:max-h-[300px] lg:max-w-[400px] lg:max-h-[400px] xl:max-w-[500px] xl:max-h-[500px] 2xl:max-w-[600px] 2xl:max-h-[600px] object-cover"
                 />
