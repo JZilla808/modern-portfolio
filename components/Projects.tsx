@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 
 type Props = {};
 
@@ -93,6 +92,63 @@ const projectsList: Project[] = [
 function Projects({}: Props) {
   const projects = projectsList;
   const projectListRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [clearedIndexes, setClearedIndexes] = useState<Set<number>>(
+    () => new Set([0, 1])
+  );
+
+  useEffect(() => {
+    const container = projectListRef.current;
+    if (!container) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          const indexAttribute = entry.target.getAttribute("data-index");
+          if (indexAttribute === null) {
+            return;
+          }
+
+          const index = Number(indexAttribute);
+
+          setClearedIndexes((prev) => {
+            const next = new Set(prev);
+            const initialSize = next.size;
+            next.add(index);
+            if (index + 1 < projects.length) {
+              next.add(index + 1);
+            }
+
+            if (next.size === initialSize) {
+              return prev;
+            }
+
+            return next;
+          });
+        });
+      },
+      {
+        root: container,
+        threshold: 0.6,
+      }
+    );
+
+    cardRefs.current.forEach((card) => {
+      if (card) {
+        observer.observe(card);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [projects.length]);
 
   const scrollProjectList = (direction: "left" | "right") => {
     if (projectListRef.current) {
@@ -126,23 +182,41 @@ function Projects({}: Props) {
         ref={projectListRef}
         className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
       >
-        {projects.map((project, i) => (
+        {projects.map((project, i) => {
+          const shouldLoadImage = clearedIndexes.has(i);
+          const placeholderSrc =
+            "data:image/gif;base64,R0lGODlhAQABAIAAAP///////ywAAAAAAQABAAACAkQBADs=";
+
+          return (
           <div
             key={i}
+            data-index={i}
+            ref={(el) => {
+              cardRefs.current[i] = el;
+            }}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-3 sm:space-y-5 items-center justify-center p-4 sm:p-8 md:p-20 lg:p-44 h-screen"
           >
             <a
               href={projects[i].link}
               target="_blank"
               rel="noopener noreferrer"
+              className="relative flex items-center justify-center"
             >
+              {!shouldLoadImage && (
+                <div
+                  className="absolute inset-0 rounded-xl bg-gray-800/30 animate-pulse"
+                  aria-hidden="true"
+                />
+              )}
               <motion.img
                 initial={{ y: -100, opacity: 0 }}
                 transition={{ duration: 1 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                src={projects[i].imageUrl}
+                src={shouldLoadImage ? projects[i].imageUrl : placeholderSrc}
                 alt=""
+                loading={i <= 1 ? "eager" : "lazy"}
+                decoding="async"
                 className="max-w-[200px] max-h-[200px] portrait:max-w-[350px] portrait:max-h-[300px] sm:max-w-[150px] sm:max-h-[150px] md:max-w-[300px] md:max-h-[300px] lg:max-w-[400px] lg:max-h-[400px] xl:max-w-[500px] xl:max-h-[500px] 2xl:max-w-[600px] 2xl:max-h-[600px] object-cover"
               />
             </a>
@@ -165,7 +239,8 @@ function Projects({}: Props) {
               </p>
             </div>
           </div>
-        ))}
+        );
+        })}
       </div>
 
       <button
