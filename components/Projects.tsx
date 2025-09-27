@@ -93,10 +93,13 @@ function Projects({}: Props) {
   const projects = projectsList;
   const projectListRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
   const [clearedIndexes, setClearedIndexes] = useState<Set<number>>(
     () => new Set([0, 1])
   );
-  const [loadedIndexes, setLoadedIndexes] = useState<Set<number>>(() => new Set());
+  const [visibleIndexes, setVisibleIndexes] = useState<Set<number>>(
+    () => new Set()
+  );
 
   useEffect(() => {
     const container = projectListRef.current;
@@ -151,6 +154,64 @@ function Projects({}: Props) {
     };
   }, [projects.length]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    let animationFrame: number | null = null;
+
+    const checkVisibility = () => {
+      let shouldContinue = false;
+
+      clearedIndexes.forEach((index) => {
+        if (visibleIndexes.has(index)) {
+          return;
+        }
+
+        const image = imageRefs.current[index];
+        if (!image) {
+          shouldContinue = true;
+          return;
+        }
+
+        const project = projects[index];
+        if (!project) {
+          return;
+        }
+
+        const hasRealSource = image.currentSrc === project.imageUrl;
+        const hasDimensions = image.naturalWidth > 0 && image.naturalHeight > 0;
+
+        if (hasRealSource && hasDimensions) {
+          setVisibleIndexes((prev) => {
+            if (prev.has(index)) {
+              return prev;
+            }
+
+            const next = new Set(prev);
+            next.add(index);
+            return next;
+          });
+        } else {
+          shouldContinue = true;
+        }
+      });
+
+      if (shouldContinue) {
+        animationFrame = window.requestAnimationFrame(checkVisibility);
+      }
+    };
+
+    animationFrame = window.requestAnimationFrame(checkVisibility);
+
+    return () => {
+      if (animationFrame !== null) {
+        window.cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, [clearedIndexes, projects, visibleIndexes]);
+
   const scrollProjectList = (direction: "left" | "right") => {
     if (projectListRef.current) {
       projectListRef.current.scrollBy({
@@ -185,11 +246,11 @@ function Projects({}: Props) {
       >
         {projects.map((project, i) => {
           const shouldLoadImage = clearedIndexes.has(i);
-          const isImageLoaded = loadedIndexes.has(i);
-          const shouldShowLoader = shouldLoadImage && !isImageLoaded;
-          const shouldShowPoster = !isImageLoaded;
+          const isImageVisible = visibleIndexes.has(i);
+          const shouldShowPoster = !isImageVisible;
+          const shouldShowLoader = shouldShowPoster && shouldLoadImage;
           const basePosterClasses =
-            "absolute inset-0 rounded-xl bg-gray-950/50 backdrop-blur-sm flex items-center justify-center";
+            "absolute inset-0 rounded-xl flex items-center justify-center bg-gray-950/40 transition-opacity";
           const posterClasses = shouldShowLoader
             ? basePosterClasses
             : `${basePosterClasses} animate-pulse`;
@@ -229,16 +290,20 @@ function Projects({}: Props) {
                   transition={{ duration: 1 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
+                  ref={(element) => {
+                    imageRefs.current[i] = element;
+                  }}
                   src={shouldLoadImage ? projects[i].imageUrl : placeholderSrc}
                   alt=""
                   loading={i <= 1 ? "eager" : "lazy"}
                   decoding="async"
-                  onLoad={() => {
-                    if (!shouldLoadImage) {
+                  onLoad={(event) => {
+                    const image = event.currentTarget;
+                    if (image.currentSrc !== projects[i].imageUrl) {
                       return;
                     }
 
-                    setLoadedIndexes((prev) => {
+                    setVisibleIndexes((prev) => {
                       if (prev.has(i)) {
                         return prev;
                       }
