@@ -74,12 +74,12 @@ const experienceItems = [
   {
     employerLogo: "/experiences/magicqr.jpg",
     title: "Software Engineer",
-    text: "MagicQR Inc.",
+    text: "MagicQR (DBA Fayva)",
     startDate: "Jun 2024",
-    endDate: "Apr 2025",
+    endDate: "Present",
     summaryPoints: [
-      "Led the development of a secure QR-based event platform, enabling seamless orders and attendee verification.",
-      "Implemented robust security and optimized performance for high adoption at live events.",
+      "Led front-end architecture for Fayva's attendee and staff portals with Next.js and TypeScript, delivering browsing, ordering, and analytics flows.",
+      "Implemented authentication, QR scanning, Stripe/mobile wallet payments with PCI compliance, and AI-aided testing that cut wait times 50% and boosted engagement 75%.",
     ],
   },
 ];
