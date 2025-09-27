@@ -94,12 +94,13 @@ function Projects({}: Props) {
   const projectListRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
-  const [clearedIndexes, setClearedIndexes] = useState<Set<number>>(
+  const [queuedIndexes, setQueuedIndexes] = useState<Set<number>>(
     () => new Set([0, 1])
   );
   const [visibleIndexes, setVisibleIndexes] = useState<Set<number>>(
     () => new Set()
   );
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const container = projectListRef.current;
@@ -110,7 +111,7 @@ function Projects({}: Props) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
+          if (!entry.isIntersecting || entry.intersectionRatio < 0.6) {
             return;
           }
 
@@ -121,16 +122,23 @@ function Projects({}: Props) {
 
           const index = Number(indexAttribute);
 
-          setClearedIndexes((prev) => {
-            const next = new Set(prev);
+          setActiveIndex((previousActive) =>
+            previousActive === index ? previousActive : index
+          );
+
+          setQueuedIndexes((previousQueue) => {
+            const next = new Set(previousQueue);
             const initialSize = next.size;
+
             next.add(index);
-            if (index + 1 < projects.length) {
-              next.add(index + 1);
+
+            const lookAheadIndex = index + 1;
+            if (lookAheadIndex < projects.length) {
+              next.add(lookAheadIndex);
             }
 
             if (next.size === initialSize) {
-              return prev;
+              return previousQueue;
             }
 
             return next;
@@ -162,16 +170,16 @@ function Projects({}: Props) {
     let animationFrame: number | null = null;
 
     const checkVisibility = () => {
-      let shouldContinue = false;
+      let hasPendingDownloads = false;
 
-      clearedIndexes.forEach((index) => {
+      queuedIndexes.forEach((index) => {
         if (visibleIndexes.has(index)) {
           return;
         }
 
         const image = imageRefs.current[index];
         if (!image) {
-          shouldContinue = true;
+          hasPendingDownloads = true;
           return;
         }
 
@@ -207,23 +215,29 @@ function Projects({}: Props) {
             return next;
           });
         } else {
-          shouldContinue = true;
+          hasPendingDownloads = true;
         }
       });
 
-      if (shouldContinue) {
+      if (hasPendingDownloads) {
         animationFrame = window.requestAnimationFrame(checkVisibility);
       }
     };
 
-    animationFrame = window.requestAnimationFrame(checkVisibility);
+    const hasWork = Array.from(queuedIndexes).some(
+      (index) => !visibleIndexes.has(index)
+    );
+
+    if (hasWork) {
+      animationFrame = window.requestAnimationFrame(checkVisibility);
+    }
 
     return () => {
       if (animationFrame !== null) {
         window.cancelAnimationFrame(animationFrame);
       }
     };
-  }, [clearedIndexes, projects, visibleIndexes]);
+  }, [projects, queuedIndexes, visibleIndexes]);
 
   const scrollProjectList = (direction: "left" | "right") => {
     if (projectListRef.current) {
@@ -258,10 +272,12 @@ function Projects({}: Props) {
         className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
       >
         {projects.map((project, i) => {
-          const shouldLoadImage = clearedIndexes.has(i);
+          const isActiveCard = activeIndex === i;
+          const isImageQueued = queuedIndexes.has(i);
           const isImageVisible = visibleIndexes.has(i);
           const shouldShowPoster = !isImageVisible;
-          const shouldShowLoader = shouldShowPoster && shouldLoadImage;
+          const shouldShowLoader = isImageQueued && !isImageVisible;
+          const shouldLoadImage = isImageQueued;
           const basePosterClasses =
             "absolute inset-0 rounded-xl flex items-center justify-center bg-gray-950/40 transition-opacity";
           const posterClasses = shouldShowLoader
@@ -274,6 +290,7 @@ function Projects({}: Props) {
             <div
               key={i}
               data-index={i}
+              data-active={isActiveCard ? "true" : undefined}
               ref={(el) => {
                 cardRefs.current[i] = el;
               }}
@@ -337,17 +354,6 @@ function Projects({}: Props) {
 
                       const next = new Set(prev);
                       next.add(i);
-                      return next;
-                    });
-
-                    setClearedIndexes((prev) => {
-                      const nextIndex = i + 1;
-                      if (nextIndex >= projects.length || prev.has(nextIndex)) {
-                        return prev;
-                      }
-
-                      const next = new Set(prev);
-                      next.add(nextIndex);
                       return next;
                     });
                   }}
