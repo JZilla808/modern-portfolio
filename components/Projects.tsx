@@ -46,6 +46,13 @@ const projectsList: Project[] = [
     link: "https://www.chunespot.com/",
   },
   {
+    imageUrl: "/project_thumbnails/flippyhop_demo.gif",
+    title: "FlippyHop",
+    description:
+      "An original solo-built React/Next.js 2D web game delivering dynamic grid-based play, multiple input modes, procedural level generation, 18 unlockable characters, advanced difficulty scaling.",
+    link: "https://gikoyo.com/",
+  },
+  {
     imageUrl: "/project_thumbnails/tweepia_demo.gif",
     title: "Twitter Clone (Tweepia)",
     description:
@@ -191,7 +198,10 @@ function Projects({}: Props) {
         const expectedSrc = (() => {
           try {
             if (typeof window !== "undefined") {
-              return new URL(project.imageUrl, window.location.origin).toString();
+              return new URL(
+                project.imageUrl,
+                window.location.origin
+              ).toString();
             }
             return project.imageUrl;
           } catch {
@@ -303,10 +313,15 @@ function Projects({}: Props) {
                 className="relative flex items-center justify-center"
               >
                 {shouldShowPoster && (
-                  <div className={posterClasses} aria-hidden={!shouldShowLoader}>
+                  <div
+                    className={posterClasses}
+                    aria-hidden={!shouldShowLoader}
+                  >
                     {shouldShowLoader && (
                       <>
-                        <span className="sr-only">Loading project preview…</span>
+                        <span className="sr-only">
+                          Loading project preview…
+                        </span>
                         <span
                           aria-hidden="true"
                           className="h-12 w-12 rounded-full border-4 border-[#F7AB0A]/70 border-t-transparent animate-spin"
@@ -374,12 +389,12 @@ function Projects({}: Props) {
                   </h4>
                 </a>
 
-              <p className="text-sm sm:text-base md:text-lg text-center">
-                {projects[i].description}
-              </p>
+                <p className="text-sm sm:text-base md:text-lg text-center">
+                  {projects[i].description}
+                </p>
+              </div>
             </div>
-          </div>
-        );
+          );
         })}
       </div>
 
