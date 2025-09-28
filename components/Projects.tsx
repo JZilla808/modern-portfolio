@@ -6,7 +6,7 @@ type Props = {};
 type Project = {
   imageUrl: string;
   title: string;
-  description: string;
+  description: React.ReactNode;
   link: string;
 };
 
@@ -14,8 +14,21 @@ const projectsList: Project[] = [
   {
     imageUrl: "/project_thumbnails/fayva_demo.gif",
     title: "Digital Ordering Platform (Fayva)",
-    description:
-      "Architected Fayva's QR-powered ordering platform with real-time menus, payments, dashboards, and AI-driven personalization.",
+    description: (
+      <>
+        Architected Fayva&apos;s QR-powered ordering platform with real-time
+        menus, payments, dashboards, and AI-driven personalization.{" "}
+        <a
+          href="https://getfayva-nonprod.com/location/AD708"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#F7AB0A] underline decoration-[#F7AB0A]/60"
+        >
+          Demo Link
+        </a>
+        .
+      </>
+    ),
     link: "https://fayvanow.com/",
   },
   {
