@@ -7,7 +7,7 @@ type Project = {
   imageUrl: string;
   title: string;
   description: React.ReactNode;
-  link: string;
+  link?: string;
 };
 
 const projectsList: Project[] = [
@@ -98,7 +98,7 @@ const projectsList: Project[] = [
     title: "Go Web App for Bookings (Bookings)",
     description:
       "A fast loading full-stack website for bookings and reservations. Built without using any front-end frameworks.",
-    link: "https://golangbookings.jayzhou.work/",
+    // link: "https://golangbookings.jayzhou.work/",
   },
   {
     imageUrl: "/project_thumbnails/supabolo_demo.gif",
@@ -301,6 +301,7 @@ function Projects({}: Props) {
           const shouldShowPoster = !isImageVisible;
           const shouldShowLoader = isImageQueued && !isImageVisible;
           const shouldLoadImage = isImageQueued;
+          const hasLink = Boolean(project.link);
           const basePosterClasses =
             "absolute inset-0 rounded-xl flex items-center justify-center bg-gray-950/40 transition-opacity";
           const posterClasses = shouldShowLoader
@@ -308,6 +309,73 @@ function Projects({}: Props) {
             : `${basePosterClasses} animate-pulse`;
           const placeholderSrc =
             "data:image/gif;base64,R0lGODlhAQABAIAAAP///////ywAAAAAAQABAAACAkQBADs=";
+          const imageWrapperClass = "relative flex items-center justify-center";
+          const mediaContent = (
+            <>
+              {shouldShowPoster && (
+                <div
+                  className={posterClasses}
+                  aria-hidden={!shouldShowLoader}
+                >
+                  {shouldShowLoader && (
+                    <>
+                      <span className="sr-only">
+                        Loading project preview…
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        className="h-12 w-12 rounded-full border-4 border-[#F7AB0A]/70 border-t-transparent animate-spin"
+                      />
+                    </>
+                  )}
+                </div>
+              )}
+              <motion.img
+                initial={{ y: -100, opacity: 0 }}
+                transition={{ duration: 1 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                ref={(element) => {
+                  imageRefs.current[i] = element;
+                }}
+                src={shouldLoadImage ? project.imageUrl : placeholderSrc}
+                alt=""
+                loading={i <= 1 ? "eager" : "lazy"}
+                decoding="async"
+                onLoad={(event) => {
+                  const image = event.currentTarget;
+                  const expectedSrc = (() => {
+                    try {
+                      return new URL(
+                        project.imageUrl,
+                        image.baseURI ?? window.location.origin
+                      ).toString();
+                    } catch {
+                      return project.imageUrl;
+                    }
+                  })();
+                  const attributeSrc = image.getAttribute("src");
+                  if (
+                    image.currentSrc !== expectedSrc &&
+                    attributeSrc !== project.imageUrl
+                  ) {
+                    return;
+                  }
+
+                  setVisibleIndexes((prev) => {
+                    if (prev.has(i)) {
+                      return prev;
+                    }
+
+                    const next = new Set(prev);
+                    next.add(i);
+                    return next;
+                  });
+                }}
+                className="max-w-[200px] max-h-[200px] portrait:max-w-[350px] portrait:max-h-[300px] sm:max-w-[150px] sm:max-h-[150px] md:max-w-[300px] md:max-h-[300px] lg:max-w-[400px] lg:max-h-[400px] xl:max-w-[500px] xl:max-h-[500px] 2xl:max-w-[600px] 2xl:max-h-[600px] object-cover"
+              />
+            </>
+          );
 
           return (
             <div
@@ -319,91 +387,50 @@ function Projects({}: Props) {
               }}
               className="w-screen flex-shrink-0 snap-center flex flex-col space-y-3 sm:space-y-5 items-center justify-center p-4 sm:p-8 md:p-20 lg:p-44 h-screen"
             >
-              <a
-                href={projects[i].link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative flex items-center justify-center"
-              >
-                {shouldShowPoster && (
-                  <div
-                    className={posterClasses}
-                    aria-hidden={!shouldShowLoader}
-                  >
-                    {shouldShowLoader && (
-                      <>
-                        <span className="sr-only">
-                          Loading project preview…
-                        </span>
-                        <span
-                          aria-hidden="true"
-                          className="h-12 w-12 rounded-full border-4 border-[#F7AB0A]/70 border-t-transparent animate-spin"
-                        />
-                      </>
-                    )}
-                  </div>
-                )}
-                <motion.img
-                  initial={{ y: -100, opacity: 0 }}
-                  transition={{ duration: 1 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  viewport={{ once: true }}
-                  ref={(element) => {
-                    imageRefs.current[i] = element;
-                  }}
-                  src={shouldLoadImage ? projects[i].imageUrl : placeholderSrc}
-                  alt=""
-                  loading={i <= 1 ? "eager" : "lazy"}
-                  decoding="async"
-                  onLoad={(event) => {
-                    const image = event.currentTarget;
-                    const expectedSrc = (() => {
-                      try {
-                        return new URL(
-                          projects[i].imageUrl,
-                          image.baseURI ?? window.location.origin
-                        ).toString();
-                      } catch {
-                        return projects[i].imageUrl;
-                      }
-                    })();
-                    const attributeSrc = image.getAttribute("src");
-                    if (
-                      image.currentSrc !== expectedSrc &&
-                      attributeSrc !== projects[i].imageUrl
-                    ) {
-                      return;
-                    }
-
-                    setVisibleIndexes((prev) => {
-                      if (prev.has(i)) {
-                        return prev;
-                      }
-
-                      const next = new Set(prev);
-                      next.add(i);
-                      return next;
-                    });
-                  }}
-                  className="max-w-[200px] max-h-[200px] portrait:max-w-[350px] portrait:max-h-[300px] sm:max-w-[150px] sm:max-h-[150px] md:max-w-[300px] md:max-h-[300px] lg:max-w-[400px] lg:max-h-[400px] xl:max-w-[500px] xl:max-h-[500px] 2xl:max-w-[600px] 2xl:max-h-[600px] object-cover"
-                />
-              </a>
-              <div className="space-y-3 sm:space-y-5 px-2 sm:px-4 md:px-10 max-w-6xl">
+              {hasLink ? (
                 <a
-                  href={projects[i].link}
+                  href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className={imageWrapperClass}
                 >
-                  <h4 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-center">
-                    <span className="underline decoration-[#F7AB0A]/50">
-                      Project {i + 1} of {projects.length}:
-                    </span>{" "}
-                    {projects[i].title}
-                  </h4>
+                  {mediaContent}
                 </a>
+              ) : (
+                <div
+                  className={imageWrapperClass}
+                  aria-disabled="true"
+                >
+                  {mediaContent}
+                </div>
+              )}
+              <div className="space-y-3 sm:space-y-5 px-2 sm:px-4 md:px-10 max-w-6xl">
+                {hasLink ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <h4 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-center">
+                      <span className="underline decoration-[#F7AB0A]/50">
+                        Project {i + 1} of {projects.length}:
+                      </span>{" "}
+                      {project.title}
+                    </h4>
+                  </a>
+                ) : (
+                  <div aria-hidden className="cursor-default">
+                    <h4 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-center">
+                      <span className="underline decoration-[#F7AB0A]/50">
+                        Project {i + 1} of {projects.length}:
+                      </span>{" "}
+                      {project.title}
+                    </h4>
+                  </div>
+                )}
 
                 <p className="text-sm sm:text-base md:text-lg text-center">
-                  {projects[i].description}
+                  {project.description}
                 </p>
               </div>
             </div>
