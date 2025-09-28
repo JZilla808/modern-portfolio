@@ -33,7 +33,7 @@ export default function Hero({}: Props) {
         </h2>
         <h1 className="s8:text-xl 12pro:text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold s8:px-7 sm:px-10">
           <span>{text}</span>
-          <Cursor cursorColor="#F7AB0A" />
+          <Cursor cursorColor="#d3fe4f" />
         </h1>
         <div className="pt-5">
           <Link href="#about">

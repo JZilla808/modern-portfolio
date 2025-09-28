@@ -32,7 +32,7 @@ export default function About({}: Props) {
       <div className="space-y-10 px-0 md:px-10">
         <h4 className="s8:text-2xl 12pro:text-3xl sm:text-4xl font-semibold hide-mobile-portrait">
           Here is a{" "}
-          <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
+          <span className="underline decoration-[#d3fe4f]/50">little</span>{" "}
           background
         </h4>
         <p className="s8:text-sm 12pro:text-base text-justify">

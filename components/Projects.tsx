@@ -22,7 +22,7 @@ const projectsList: Project[] = [
           href="https://getfayva-nonprod.com/location/AD708"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F7AB0A] underline decoration-[#F7AB0A]/60"
+          className="text-[#d3fe4f] underline decoration-[#d3fe4f]/60"
         >
           Demo Link
         </a>
@@ -292,7 +292,7 @@ function Projects({}: Props) {
 
       <div
         ref={projectListRef}
-        className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
+        className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#d3fe4f]/80"
       >
         {projects.map((project, i) => {
           const isActiveCard = activeIndex === i;
@@ -324,7 +324,7 @@ function Projects({}: Props) {
                       </span>
                       <span
                         aria-hidden="true"
-                        className="h-12 w-12 rounded-full border-4 border-[#F7AB0A]/70 border-t-transparent animate-spin"
+                        className="h-12 w-12 rounded-full border-4 border-[#d3fe4f]/70 border-t-transparent animate-spin"
                       />
                     </>
                   )}
@@ -412,7 +412,7 @@ function Projects({}: Props) {
                     rel="noopener noreferrer"
                   >
                     <h4 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-center">
-                      <span className="underline decoration-[#F7AB0A]/50">
+                      <span className="underline decoration-[#d3fe4f]/50">
                         Project {i + 1} of {projects.length}:
                       </span>{" "}
                       {project.title}
@@ -421,7 +421,7 @@ function Projects({}: Props) {
                 ) : (
                   <div aria-hidden className="cursor-default">
                     <h4 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-center">
-                      <span className="underline decoration-[#F7AB0A]/50">
+                      <span className="underline decoration-[#d3fe4f]/50">
                         Project {i + 1} of {projects.length}:
                       </span>{" "}
                       {project.title}
@@ -446,7 +446,7 @@ function Projects({}: Props) {
       </button>
 
       {/* Background stripe */}
-      <div className="absolute w-full 12pro:top-[30%] sm:top-[25%] bg-[#F7AB0A]/10 left-0 s8:h-[300px] 12pro:h-[400px] sm:h-[500px] -skew-y-12" />
+      <div className="absolute w-full 12pro:top-[30%] sm:top-[25%] bg-[#d3fe4f]/10 left-0 s8:h-[300px] 12pro:h-[400px] sm:h-[500px] -skew-y-12" />
     </motion.div>
   );
 }

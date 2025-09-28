@@ -27,24 +27,24 @@ function ContactMe({}: Props) {
       <div className="s8:mt-20 12pro:mt-16 sm:mt-0 flex flex-col space-y-10">
         <h4 className="s8:text-2xl 12pro:text-3xl sm:text-4xl font-semibold text-center">
           I have got just what you need.{" "}
-          <span className="decoration-[#F7AB0A]/50 underline">
+          <span className="decoration-[#d3fe4f]/50 underline">
             Let&apos;s Talk.
           </span>
         </h4>
 
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <PhoneIcon className="text-[#d3fe4f] h-7 w-7 animate-pulse" />
             <p className="s8:text-xl 12pro:text-2xl">+1(806)822-9999</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <EnvelopeIcon className="text-[#d3fe4f] h-7 w-7 animate-pulse" />
             <p className="s8:text-xl 12pro:text-2xl">contact@jayzhou.work</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <MapPinIcon className="text-[#d3fe4f] h-7 w-7 animate-pulse" />
             <p className="s8:text-xl sm:text-2xl">
               777 S. Alameda St, Los Angeles
             </p>
@@ -85,7 +85,7 @@ function ContactMe({}: Props) {
           />
           <button
             type="submit"
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"
+            className="bg-[#d3fe4f] py-5 px-10 rounded-md text-black font-bold text-lg"
           >
             Submit
           </button>

@@ -98,7 +98,7 @@ function WorkExperience({}: Props) {
           Experience
         </h3>
 
-        <div className="w-full flex s8:mt-20 12pro:mt-16 space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+        <div className="w-full flex s8:mt-20 12pro:mt-16 space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#d3fe4f]/80">
           <ExperienceCard experienceItems={[...experienceItems].reverse()} />
         </div>
       </motion.div>
