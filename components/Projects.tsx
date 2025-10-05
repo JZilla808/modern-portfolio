@@ -429,7 +429,10 @@ function Projects({}: Props) {
                   </div>
                 )}
 
-                <p className="text-sm sm:text-base md:text-lg text-center">
+                <p
+                  className="text-sm sm:text-base md:text-lg text-center max-h-32 overflow-y-auto scrollbar-thin scrollbar-thumb-white/40 scrollbar-track-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D1FE17]/60 sm:max-h-none sm:overflow-visible"
+                  tabIndex={0}
+                >
                   {project.description}
                 </p>
               </div>
