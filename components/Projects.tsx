@@ -42,7 +42,7 @@ const projectsList: Project[] = [
     title: "ChatGPT AI Image Generator",
     description:
       "A full-stack web app that utilizes the microservices architecture to generate images based on user prompts.",
-    link: "https://image.chasegpt.com/",
+    link: "https://chasegpt-ai-image-generator.vercel.app/",
   },
   {
     imageUrl: "/project_thumbnails/weather_app.gif",
