@@ -1,44 +1,79 @@
-
 # Modern Portfolio Website
 
-Welcome to my modern portfolio website, a vibrant and interactive showcase of my skills and projects as a front-end and full-stack developer. This portfolio is designed to highlight my expertise in web development, showcasing my proficiency in a variety of modern technologies. It also features smooth animations, enhancing the user experience and adding a dynamic touch to the presentation of my work.
+A vibrant and interactive showcase of front-end and full-stack development work. The site highlights modern web development skills with a focus on clean design, smooth interactions, and accessible presentation of projects.
 
-## Technologies Used
+## Table of Contents
+- [Tech Stack](#tech-stack)
+- [Key Features](#key-features)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
 
-This portfolio is built with a robust stack of technologies, ensuring a seamless and dynamic user experience:
+## Tech Stack
+- **Next.js** – Production-grade React framework with server-side rendering and static site generation.
+- **React** – Declarative UI library powering the component architecture.
+- **TypeScript** – Static typing for safer, more maintainable code.
+- **Tailwind CSS** – Utility-first styling for rapid, responsive layouts.
+- **Framer Motion** – Animation library for polished transitions and interactions.
+- **React Hook Form** – Lightweight form management with accessible validation.
+- **ESLint & Prettier** – Code quality and formatting tools.
 
-- **Next.js**: A powerful React framework for production-grade applications, providing server-side rendering and generating static websites.
-- **React**: A JavaScript library for building user interfaces, enabling dynamic and responsive web pages.
-- **TypeScript**: A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
-- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs, promoting responsive and efficient styling.
-- **Framer Motion**: A library for React to power animation, enhancing user interaction with smooth and natural motion.
-- **ESLint**: A static code analysis tool for identifying and fixing problems in JavaScript code, ensuring code quality and consistency.
-- **React Hook Form**: Efficient, flexible, and extensible forms with easy-to-use validation.
-- **React Simple Typewriter & React Social Icons**: Libraries to add aesthetic and functional elements to the website.
+## Key Features
+- **Responsive design** optimized for mobile, tablet, and desktop.
+- **Interactive UI/UX** with Framer Motion powered animations.
+- **Project showcase** sections highlighting experience and accomplishments.
+- **Contact form** integrated with React Hook Form for validation and submission.
+- **Social media integration** using React Social Icons for quick access to profiles.
 
-## Features
-
-- **Responsive Design**: Built with mobile-first approach ensuring compatibility across various devices and screen sizes.
-- **Interactive UI/UX**: Engaging user interfaces with smooth animations and transitions.
-- **Portfolio Showcase**: Projects and accomplishments are displayed in a clean, organized manner.
-- **Contact Form**: Integrated with `react-hook-form` for a seamless user experience.
-- **Social Media Integration**: Easy access to professional profiles through `react-social-icons`.
+## Project Structure
+```
+modern-portfolio/
+├─ components/       # Reusable UI components
+├─ pages/            # Next.js pages and API routes
+├─ public/           # Static assets (images, favicons, etc.)
+├─ styles/           # Global styles and Tailwind configuration
+├─ package.json      # Dependencies and scripts
+└─ README.md         # Project documentation
+```
 
 ## Getting Started
-
-To run this project locally:
-
-1. Clone the repository:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/JZilla808/modern-portfolio.git
+   cd modern-portfolio
    ```
-   gh repo clone JZilla808/modern-portfolio
-   ```
-2. Install dependencies:
-   ```
+2. **Install dependencies**
+   ```bash
    pnpm install
    ```
-3. Start the development server:
+3. **Start the development server**
+   ```bash
+   pnpm dev
    ```
-   pnpm run dev
-   ```
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
 
+### Environment Variables
+No external services are required by default. If you add integrations (e.g., contact form backends or analytics), create a `.env.local` file and restart the dev server.
+
+## Available Scripts
+| Command        | Description                                  |
+|----------------|----------------------------------------------|
+| `pnpm dev`     | Starts the Next.js development server.       |
+| `pnpm build`   | Creates an optimized production build.       |
+| `pnpm start`   | Runs the production build locally.           |
+| `pnpm lint`    | Runs ESLint over the project.                |
+
+## Deployment
+The site can be deployed to any platform that supports Next.js (e.g., Vercel, Netlify). For Vercel:
+1. Push your changes to a GitHub repository.
+2. Import the project into Vercel and select the repository.
+3. Accept the default Next.js settings and deploy.
+
+## Contributing
+Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
