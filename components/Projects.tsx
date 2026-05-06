@@ -17,16 +17,7 @@ const projectsList: Project[] = [
     description: (
       <>
         Architected Fayva&apos;s QR-powered ordering platform with real-time
-        menus, payments, dashboards, and AI-driven personalization.{" "}
-        <a
-          href="https://getfayva-nonprod.com/location/AD708"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#D1FE17] underline decoration-[#D1FE17]/60"
-        >
-          Demo Link
-        </a>
-        .
+        menus, payments, dashboards, and AI-driven personalization.
       </>
     ),
     link: "https://fayvanow.com/",
