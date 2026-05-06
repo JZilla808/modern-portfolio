@@ -5,6 +5,51 @@ import Skill from "./Skill";
 type Props = {};
 const skillList = [
   {
+    name: "AI-assisted development",
+    iconPath: "/skills/git.png",
+    proficiency: "90%",
+  },
+  {
+    name: "LLM app development",
+    iconPath: "/skills/typescript.png",
+    proficiency: "85%",
+  },
+  {
+    name: "Agentic workflows",
+    iconPath: "/skills/python.ico",
+    proficiency: "85%",
+  },
+  {
+    name: "Practical prompt engineering",
+    iconPath: "/skills/javascript.png",
+    proficiency: "85%",
+  },
+  {
+    name: "Cursor",
+    iconPath: "/skills/typescript.png",
+    proficiency: "90%",
+  },
+  {
+    name: "Windsurf",
+    iconPath: "/skills/react.png",
+    proficiency: "85%",
+  },
+  {
+    name: "Claude Code",
+    iconPath: "/skills/nodejs.png",
+    proficiency: "85%",
+  },
+  {
+    name: "OpenAI Codex",
+    iconPath: "/skills/python.ico",
+    proficiency: "85%",
+  },
+  {
+    name: "Google Antigravity",
+    iconPath: "/skills/golang.png",
+    proficiency: "80%",
+  },
+  {
     name: "JavaScript",
     iconPath: "/skills/javascript.png",
     proficiency: "90%",
@@ -28,11 +73,6 @@ const skillList = [
     name: "TypeScript",
     iconPath: "/skills/typescript.png",
     proficiency: "85%",
-  },
-  {
-    name: "Angular",
-    iconPath: "/skills/angular.png",
-    proficiency: "75%",
   },
   {
     name: "Vue",

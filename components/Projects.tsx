@@ -34,14 +34,15 @@ const projectsList: Project[] = [
   {
     imageUrl: "/project_thumbnails/chasegpt_demo.gif",
     title: "ChatGPT Clone (ChaseGPT)",
-    description: "A modern, responsive full-stack web app inspired by ChatGPT.",
+    description:
+      "Full-stack UI inspired by ChatGPT with clean UX; built fast using AI tooling.",
     link: "https://www.chasegpt.com/",
   },
   {
     imageUrl: "/project_thumbnails/image_generator.gif",
     title: "ChatGPT AI Image Generator",
     description:
-      "A full-stack web app that utilizes the microservices architecture to generate images based on user prompts.",
+      "AI image generator that turns user prompts into visuals through a full-stack microservices architecture.",
     link: "https://chasegpt-ai-image-generator.vercel.app/",
   },
   {
@@ -52,31 +53,31 @@ const projectsList: Project[] = [
     link: "https://chasegpt-ai-weather-app.vercel.app/",
   },
   {
-    imageUrl: "/project_thumbnails/chunespot_demo.gif",
-    title: "Spotify Clone (ChuneSpot)",
-    description:
-      "A full-stack music streaming app with authentication, built-in audio player, uploads, likes, search, payments and subscriptions.",
-    link: "https://www.chunespot.com/",
-  },
-  {
     imageUrl: "/project_thumbnails/flippyhop_demo.gif",
     title: "FlippyHop",
     description:
-      "An original solo-built React/Next.js 2D web game delivering dynamic grid-based play, multiple input modes, procedural level generation, 18 unlockable characters, advanced difficulty scaling.",
+      "Original React/Next.js web game built with AI Agentic development, featuring grid-based play, procedural levels, and unlockable characters.",
     link: "https://gikoyo.com/",
+  },
+  {
+    imageUrl: "/project_thumbnails/chunespot_demo.gif",
+    title: "Spotify Clone (ChuneSpot)",
+    description:
+      "Full-stack music app: auth, audio player, uploads, likes, search, payments, and subscriptions.",
+    link: "https://www.chunespot.com/",
   },
   {
     imageUrl: "/project_thumbnails/tweepia_demo.gif",
     title: "Twitter Clone (Tweepia)",
     description:
-      "A full-stack Twitter-inspired web app that features user authentication, real-time microblogging, image uploads, and hot toast notifications.",
+      "A full-stack Twitter-inspired clone with authentication, real-time posts, image uploads, and hot toast notifications.",
     link: "https://www.tweepia.com/",
   },
   {
     imageUrl: "/project_thumbnails/ngflix_demo.gif",
     title: "Netflix-Inspired Site",
     description:
-      "A pure client-side rendering movie and TV show information site with real-time data, search functionality, video player, similar shows, and pagination.",
+      "Movie and TV discovery site with live data, search, video playback, related titles, and pagination built with Angular.",
     link: "https://ng-flix-jade.vercel.app/",
   },
   {
@@ -90,21 +91,21 @@ const projectsList: Project[] = [
     imageUrl: "/project_thumbnails/instagramapp_demo.gif",
     title: "Instagram Clone",
     description:
-      "A full-stack web app inspired by Instagram. It includes features such as real-time updates, image uploads, and guest login.",
+      "Full-stack Instagram-inspired app with real-time updates, image uploads, and guest login.",
     link: "https://instagramapp-mauve.vercel.app/",
   },
   {
     imageUrl: "/project_thumbnails/golang_bookings_demo.gif",
     title: "Go Web App for Bookings (Bookings)",
     description:
-      "A fast loading full-stack website for bookings and reservations. Built without using any front-end frameworks.",
+      "Go booking and reservation app with server-rendered pages and no front-end framework.",
     // link: "https://golangbookings.jayzhou.work/",
   },
   {
     imageUrl: "/project_thumbnails/supabolo_demo.gif",
     title: "E-commerce Site (Supabolo Clothing)",
     description:
-      "An e-commerce site with a minimalist design that features authentication, advanced state management, and Stripe integration for payments.",
+      "Minimal e-commerce storefront with authentication, state management, and Stripe payments.",
     link: "https://supabolo.com/",
   },
 ];
@@ -115,10 +116,10 @@ function Projects({}: Props) {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
   const [queuedIndexes, setQueuedIndexes] = useState<Set<number>>(
-    () => new Set([0, 1])
+    () => new Set([0, 1]),
   );
   const [visibleIndexes, setVisibleIndexes] = useState<Set<number>>(
-    () => new Set()
+    () => new Set(),
   );
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -143,7 +144,7 @@ function Projects({}: Props) {
           const index = Number(indexAttribute);
 
           setActiveIndex((previousActive) =>
-            previousActive === index ? previousActive : index
+            previousActive === index ? previousActive : index,
           );
 
           setQueuedIndexes((previousQueue) => {
@@ -168,7 +169,7 @@ function Projects({}: Props) {
       {
         root: container,
         threshold: 0.6,
-      }
+      },
     );
 
     cardRefs.current.forEach((card) => {
@@ -213,7 +214,7 @@ function Projects({}: Props) {
             if (typeof window !== "undefined") {
               return new URL(
                 project.imageUrl,
-                window.location.origin
+                window.location.origin,
               ).toString();
             }
             return project.imageUrl;
@@ -248,7 +249,7 @@ function Projects({}: Props) {
     };
 
     const hasWork = Array.from(queuedIndexes).some(
-      (index) => !visibleIndexes.has(index)
+      (index) => !visibleIndexes.has(index),
     );
 
     if (hasWork) {
@@ -313,15 +314,10 @@ function Projects({}: Props) {
           const mediaContent = (
             <>
               {shouldShowPoster && (
-                <div
-                  className={posterClasses}
-                  aria-hidden={!shouldShowLoader}
-                >
+                <div className={posterClasses} aria-hidden={!shouldShowLoader}>
                   {shouldShowLoader && (
                     <>
-                      <span className="sr-only">
-                        Loading project preview…
-                      </span>
+                      <span className="sr-only">Loading project preview…</span>
                       <span
                         aria-hidden="true"
                         className="h-12 w-12 rounded-full border-4 border-[#D1FE17]/70 border-t-transparent animate-spin"
@@ -348,7 +344,7 @@ function Projects({}: Props) {
                     try {
                       return new URL(
                         project.imageUrl,
-                        image.baseURI ?? window.location.origin
+                        image.baseURI ?? window.location.origin,
                       ).toString();
                     } catch {
                       return project.imageUrl;
@@ -397,10 +393,7 @@ function Projects({}: Props) {
                   {mediaContent}
                 </a>
               ) : (
-                <div
-                  className={imageWrapperClass}
-                  aria-disabled="true"
-                >
+                <div className={imageWrapperClass} aria-disabled="true">
                   {mediaContent}
                 </div>
               )}

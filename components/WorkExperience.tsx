@@ -45,8 +45,8 @@ const experienceItems = [
     startDate: "Jun 2018",
     endDate: "Jul 2020",
     summaryPoints: [
-      "Designed intuitive user interfaces, increasing user engagement by 40%.",
-      "Collaborated with developers to implement designs, ensuring consistency and functionality.",
+      "Built responsive user interfaces and reusable front-end patterns that support faster design-to-development iteration.",
+      "Collaborated with developers to move feedback into shipped UI more quickly while maintaining consistent implementation quality.",
     ],
   },
   {
@@ -56,8 +56,8 @@ const experienceItems = [
     startDate: "Mar 2020",
     endDate: "Oct 2021",
     summaryPoints: [
-      "Spearheaded the establishment of a media company serving top car dealerships in LA, specializing in music and car video production.",
-      "Directed all aspects of creative work, from conceptualizing the brand identity and designing the logo to producing beats and overseeing video production and editing.",
+      "Led brand, media, and web production workflows for automotive clients across music, video, and digital assets.",
+      "Improved creative review speed by prototyping concepts early and turning feedback into production-ready deliverables.",
     ],
   },
   {
@@ -67,8 +67,8 @@ const experienceItems = [
     startDate: "Oct 2021",
     endDate: "Present",
     summaryPoints: [
-      "Founded and operate a multimedia and web production company, specializing in music, beats, and web solutions for clients.",
-      "Successfully managed projects and client relations, achieving a 95% client satisfaction rate with innovative and creative solutions.",
+      "Build client websites and multimedia systems with AI-assisted development workflows across Cursor, Windsurf, Claude Code, and OpenAI Codex.",
+      "Prototype, QA, and iterate faster by pairing Next.js, TypeScript, Python, and prompt-driven review loops.",
     ],
   },
   {
@@ -78,8 +78,8 @@ const experienceItems = [
     startDate: "Jun 2024",
     endDate: "Present",
     summaryPoints: [
-      "Led front-end architecture for Fayva's attendee and staff portals with Next.js and TypeScript, delivering browsing, ordering, and analytics flows.",
-      "Implemented authentication, QR scanning, Stripe/mobile wallet payments with PCI compliance, and AI-aided testing that cut wait times 50% and boosted engagement 75%.",
+      "Led front-end architecture for Fayva's attendee and staff portals with Next.js and TypeScript, using Cursor, Windsurf, Claude Code, and Codex to speed iteration.",
+      "Shipped authentication, QR scanning, Stripe/mobile wallet payments, and AI-aided QA workflows that improved testing speed and feature delivery.",
     ],
   },
 ];
