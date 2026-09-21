@@ -17,14 +17,14 @@ This is a Next.js 13 portfolio site using the `pages` router, React, TypeScript,
 - `components/Hero.tsx` renders the first viewport, animated portrait, role label, typewriter text, and section navigation buttons.
 - `components/About.tsx` renders the portrait and biography paragraph.
 - `components/Skills.tsx` owns the `skillList` data and renders each skill through `components/Skill.tsx`.
-- `components/Projects.tsx` owns the 12-project `projectsList` data and renders the horizontally scrolling project showcase.
+- `components/Projects.tsx` owns the 12-project `projectsList` data and renders the horizontally scrolling project showcase. Each card uses an on-demand H.264 MP4 preview: the current card and next card load, the visible card plays muted/looped, and playback pauses when the card leaves view.
 - `components/WorkExperience.tsx` owns the experience data and renders cards through `components/ExperienceCard.tsx`.
 - `components/ContactMe.tsx` renders contact details and the mailto-backed contact form.
 - `components/BackgroundCircles.tsx` renders the animated hero background treatment.
 
 ## Static Assets
 
-- `public/project_thumbnails/` contains GIF previews for the project carousel.
+- `public/project_thumbnails/` contains H.264 MP4 video previews for the project carousel.
 - `public/skills/` contains skill icons used by `components/Skills.tsx`.
 - `public/experiences/` contains employer and project logos used by `components/WorkExperience.tsx`.
 - `public/portraitFull.png`, `public/portraitFull.jpg`, and `public/portrait-circle-50.png` are portrait assets used by hero/about sections.
