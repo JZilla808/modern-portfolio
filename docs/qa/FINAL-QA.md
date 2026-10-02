@@ -35,8 +35,8 @@ Compared design-concept.png and final desktop/mobile browser screenshots via vie
 Above-fold copy matches the briefed headline, intro, nav and CTAs. Intentional added portrait caption: Design-minded / Product-driven; factual assets replace concept fiction. Intentional responsive order change and additional details documented in DESIGN.md. The implementation was visually verified against the selected design direction; no unresolved clipping, overlapping titles or accidental overflow found.
 
 ## Honest limitations
-- Reduced-motion CSS disables animation, transitions and smooth scrolling; rule inspected. Current Browser/CUA exposes viewport control but no media-preference emulation, so an actual OS reduced-motion session was not exercised. No system setting was changed.
-- Print CSS inspected, but PDF print output and physical printer dialog were not rendered/validated in this session.
+- Reduced-motion emulation now verified in an isolated installed Chrome session through agent-browser: both light and dark have matchMedia=true, scrollBehavior=auto, hero animationName=none and arrow transitionDuration=0s. No global OS preference changed.
+- Print PDF now rendered with agent-browser/Chrome and visually inspected through Poppler. Found and fixed print cascade overriding hidden controls, then tightened typography/spacing to one US Letter page. Final PDF has all sections, no clipping or orphan heading, and no navigation/print controls. Print action waits for self-hosted fonts before opening dialog. Physical printer hardware remains untested.
 - Main project recordings are historical source media; their low resolution limits screenshot detail. No fictitious high-resolution UI was substituted.
 - Fayva and ChaseGPT live addresses failed local requests; primary CTAs use recorded demos and disclose this. FlippyHop returned HTTP 200. Archive original deployments are historical links; recordings remain available.
 - ESLint 10 broke installed React/import/a11y plugin APIs. Deliberately retained compatible ESLint 9 despite registry deprecation; lint passes.
@@ -45,3 +45,9 @@ Above-fold copy matches the briefed headline, intro, nav and CTAs. Intentional a
 
 ## Preview and evidence
 Local production preview: http://127.0.0.1:3008 (Mac only). Persistent IAB deliverable tab preserved. Screenshots and concept are in docs/qa; Library handoff is reported separately. No push, merge, production deployment, quota reset or purchase.
+
+## Follow-up QA and Library delivery
+
+Installed Chrome fallback used only for the two capabilities absent from IAB: reduced-motion emulation and print PDF. Verified final one-page engineering-resume-print.pdf via pdftoppm and view_image after document fonts loaded. Desktop light/dark and mobile screenshots re-inspected critically: hierarchy and contrast remain coherent; authentic recordings limit imagery fidelity, so no invented assets were added.
+
+Direct ordered Library create succeeded after prepared-upload failed before any upload; exact native Library screenshot IDs returned in the task handoff. Final packages: Next 16.3.8, React/DOM 19.3.0, TypeScript 5.9.3, Heroicons 2.2.0, ESLint 9.39.2 and eslint-config-next 16.3.8. Active patched Next chosen after testing upgrade compatibility; no App Router rewrite.

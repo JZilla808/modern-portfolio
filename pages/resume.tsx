@@ -27,7 +27,7 @@ export default function Resume() {
             <a href="https://github.com/JZilla808">github.com/JZilla808</a>
           </p>
           <div className="resume-actions">
-            <button className="button" onClick={() => window.print()}>
+            <button className="button" onClick={async () => { await document.fonts.ready; window.print(); }}>
               Print / save as PDF
             </button>
             <Link className="text-link" href="/">
