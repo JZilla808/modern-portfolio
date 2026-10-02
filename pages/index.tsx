@@ -40,7 +40,7 @@ export default function Home() {
       </a>
       <div id="top" className="site-shell">
         <PortfolioHeader />
-        <main id="main">
+        <main id="main" tabIndex={-1}>
           <section className="hero" aria-labelledby="hero-title">
             <div className="hero-copy">
               <h1 id="hero-title">

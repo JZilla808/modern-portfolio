@@ -11,7 +11,8 @@ pnpm install --frozen-lockfile
 pnpm dev
 pnpm typecheck
 pnpm lint
-pnpm build --webpack
+pnpm test
+pnpm build
 pnpm start
 ```
 

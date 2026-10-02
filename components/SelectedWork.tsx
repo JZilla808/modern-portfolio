@@ -101,16 +101,18 @@ export default function SelectedWork() {
               />
               <h3>{name}</h3>
               <p>{description}</p>
+              <a
+                className="archive-recording"
+                href={`/project_thumbnails/${image}.mp4`}
+              >
+                Recorded demo <Arrow />
+              </a>
               {url ? (
                 <a href={url} target="_blank" rel="noopener noreferrer">
-                  Visit project <Arrow />
+                  Original deployment <Arrow />
                   <span className="sr-only"> (opens in new tab)</span>
                 </a>
-              ) : (
-                <a href={`/project_thumbnails/${image}.mp4`}>
-                  Watch recorded demo <Arrow />
-                </a>
-              )}
+              ) : null}
             </article>
           ))}
         </div>

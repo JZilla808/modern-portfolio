@@ -1,0 +1,142 @@
+[
+  {
+    "size": {
+      "width": 1440,
+      "height": 900
+    },
+    "theme": "dark",
+    "bodyWidth": 1425,
+    "brokenVisibleImages": [],
+    "documentWidth": 1425,
+    "experienceHeight": 619.2734375,
+    "hero": 709.9140625,
+    "unlabeledButtons": 0,
+    "viewport": 1440
+  },
+  {
+    "size": {
+      "width": 1440,
+      "height": 900
+    },
+    "theme": "light",
+    "bodyWidth": 1425,
+    "brokenVisibleImages": [],
+    "documentWidth": 1425,
+    "experienceHeight": 619.2734375,
+    "hero": 709.9140625,
+    "unlabeledButtons": 0,
+    "viewport": 1440
+  },
+  {
+    "size": {
+      "width": 768,
+      "height": 1024
+    },
+    "theme": "dark",
+    "bodyWidth": 753,
+    "brokenVisibleImages": [],
+    "documentWidth": 753,
+    "experienceHeight": 644.8671875,
+    "hero": 368.6640625,
+    "unlabeledButtons": 0,
+    "viewport": 768
+  },
+  {
+    "size": {
+      "width": 768,
+      "height": 1024
+    },
+    "theme": "light",
+    "bodyWidth": 753,
+    "brokenVisibleImages": [],
+    "documentWidth": 753,
+    "experienceHeight": 644.8671875,
+    "hero": 368.6640625,
+    "unlabeledButtons": 0,
+    "viewport": 768
+  },
+  {
+    "size": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "dark",
+    "bodyWidth": 375,
+    "brokenVisibleImages": [],
+    "documentWidth": 375,
+    "experienceHeight": 762.1953125,
+    "hero": 327,
+    "unlabeledButtons": 0,
+    "viewport": 390
+  },
+  {
+    "size": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "light",
+    "bodyWidth": 375,
+    "brokenVisibleImages": [],
+    "documentWidth": 375,
+    "experienceHeight": 762.1953125,
+    "hero": 327,
+    "unlabeledButtons": 0,
+    "viewport": 390
+  },
+  {
+    "size": {
+      "width": 844,
+      "height": 390
+    },
+    "theme": "dark",
+    "bodyWidth": 829,
+    "brokenVisibleImages": [],
+    "documentWidth": 829,
+    "experienceHeight": 619.2734375,
+    "hero": 413,
+    "unlabeledButtons": 0,
+    "viewport": 844
+  },
+  {
+    "size": {
+      "width": 844,
+      "height": 390
+    },
+    "theme": "light",
+    "bodyWidth": 829,
+    "brokenVisibleImages": [],
+    "documentWidth": 829,
+    "experienceHeight": 619.2734375,
+    "hero": 413,
+    "unlabeledButtons": 0,
+    "viewport": 844
+  },
+  {
+    "size": {
+      "width": 320,
+      "height": 568
+    },
+    "theme": "dark",
+    "bodyWidth": 305,
+    "brokenVisibleImages": [],
+    "documentWidth": 305,
+    "experienceHeight": 837.3828125,
+    "hero": 269,
+    "unlabeledButtons": 0,
+    "viewport": 320
+  },
+  {
+    "size": {
+      "width": 320,
+      "height": 568
+    },
+    "theme": "light",
+    "bodyWidth": 305,
+    "brokenVisibleImages": [],
+    "documentWidth": 305,
+    "experienceHeight": 837.3828125,
+    "hero": 269,
+    "unlabeledButtons": 0,
+    "viewport": 320
+  }
+]

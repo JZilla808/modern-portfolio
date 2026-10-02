@@ -8,6 +8,7 @@ Pages Router Next.js portfolio, TypeScript, React. Single page with a print-frie
 - components/PortfolioHeader.tsx: desktop/mobile navigation, theme switch, shared SVG arrow.
 - components/SelectedWork.tsx: selected projects, native case-note/demo disclosures, nine-project archive.
 - components/PortfolioAbout.tsx: about, vertical employment timeline and capability groups.
+- data/theme.ts: pre-paint theme initialization, regression-tested with Node VM.
 - data/portfolio.ts: substantiated project and employment content; user-verified dates override old CVs.
 - styles/globals.css: theme tokens, self-hosted typography, responsive layouts, focus, reduced-motion and print rules.
 - public/project_stills: optimized stills extracted from real recorded demos, no fabricated screenshots.
@@ -15,4 +16,4 @@ Pages Router Next.js portfolio, TypeScript, React. Single page with a print-frie
 - public/fonts: DM Sans and DM Serif Display with SIL OFL licenses.
 - docs/qa: audit, migration and final verification evidence.
 
-Legacy components remain temporarily archived in Git history as the new implementation is verified. Public employer logos and older assets are preserved.
+Legacy components are retained in Git history; obsolete runtime dependencies and components have been removed. Public employer logos and older assets are preserved.

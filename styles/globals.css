@@ -302,7 +302,7 @@ h2 {
   height: 340px;
   object-fit: contain;
   object-position: center;
-  background: #fff;
+  background: transparent;
 }
 .project-category {
   font-size: 13px;
@@ -936,4 +936,11 @@ footer a {
   font-size: 12px;
   margin-top: 12px;
   line-height: 1.5;
+}
+.archive-grid a {
+  margin-right: 18px;
+  margin-bottom: 8px;
+}
+.archive-grid .archive-recording {
+  color: var(--accent);
 }

@@ -11,5 +11,5 @@ Recruiter-facing editorial identity. A stable statement introduces Jay; actual w
 - Pre-paint theme initialization defaults to system preference; explicit choice persists. Reduced motion disables all transitions and smooth scrolling. Video never autoplays.
 
 ## Concept provenance and intentional deviations
-Built-in imagegen concept: ../generated_images/exec-1496d697-7660-41c5-9259-4b727719921b.png (development reference only).
+Built-in imagegen concept: qa/design-concept.png (development reference only).
 The generated app images and portrait are replaced with actual repository assets to preserve factual identity. Mobile text leads rather than hiding recruiter positioning behind a portrait. Case notes, recorded demos, project archive and a print-friendly engineering resume extend the requested functional scope in the same visual system. No generated illustration is shipped as evidence of work.
