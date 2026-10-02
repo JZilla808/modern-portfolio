@@ -1,63 +1,7 @@
-import Head from "next/head";
-import { Inter } from "next/font/google";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import About from "../components/About";
-import WorkExperience from "../components/WorkExperience";
-import Skills from "../components/Skills";
-import Projects from "../components/Projects";
-import ContactMe from "../components/ContactMe";
-import Link from "next/link";
-
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
-  return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden scroll-smooth z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#D1FE17]/80">
-      <Head>
-        <title>Jay&apos;s Portfolio</title>
-        <meta
-          name="description"
-          content="A vibrant and interactive showcase of my skills and projects as a front-end and full-stack developer"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Javicon.ico" />
-      </Head>
-
-      <Header />
-
-      <section id="hero" className="snap-start">
-        <Hero />
-      </section>
-
-      <section id="about" className="snap-center">
-        <About />
-      </section>
-
-      <section id="skills" className="snap-start">
-        <Skills />
-      </section>
-
-      <section id="projects" className="snap-start">
-        <Projects />
-      </section>
-
-      <section id="experience" className="snap-center">
-        <WorkExperience />
-      </section>
-
-      <section id="contact" className="snap-start">
-        <ContactMe />
-      </section>
-
-      {/* back to the top footer */}
-      <footer className="sticky bottom-5 w-full cursor-pointer text-gray-300">
-        <div className="flex items-center justify-center">
-          <Link href="#hero">
-            <p className="text-sm uppercase tracking-wider">Back to top</p>
-          </Link>
-        </div>
-      </footer>
-    </div>
-  );
-}
+/** Recruiter-facing portfolio: native page scroll, evidence-led work and explicit media playback. */
+import Head from 'next/head';
+import Image from 'next/image';
+import PortfolioHeader,{ Arrow } from '../components/PortfolioHeader';
+import SelectedWork from '../components/SelectedWork';
+import PortfolioAbout from '../components/PortfolioAbout';
+export default function Home(){return <><Head><title>Jay Zhou — Frontend & AI Product Engineer</title><meta name="description" content="Jay Zhou builds thoughtful interfaces and useful AI applications. Explore selected work in QR commerce, conversational AI and interactive web experiences."/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="canonical" href="https://portfolio.jayzhou.work/"/><link rel="icon" href="/Javicon.ico"/><meta property="og:title" content="Jay Zhou — Thoughtful interfaces. Useful AI."/><meta property="og:description" content="Frontend & AI product engineering. Selected work, experience and contact."/><meta property="og:type" content="website"/><meta property="og:url" content="https://portfolio.jayzhou.work/"/><meta property="og:image" content="https://portfolio.jayzhou.work/social-preview.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta name="twitter:card" content="summary_large_image"/></Head><a className="skip-link" href="#main">Skip to content</a><div id="top" className="site-shell"><PortfolioHeader/><main id="main"><section className="hero" aria-labelledby="hero-title"><div className="hero-copy"><h1 id="hero-title">Thoughtful<br/>interfaces.<br/><em>Useful AI.</em></h1><p>I’m Jay Zhou, a frontend &amp; AI product engineer building clear, usable experiences for the web.</p><div className="hero-actions"><a className="button" href="#work">Explore my work <Arrow/></a><a className="text-link" href="#contact">Get in touch <Arrow/></a></div></div><div className="portrait-composition"><Image src="/portraitFull.jpg" alt="Jay Zhou" width={640} height={800} priority sizes="(max-width: 760px) 80vw, 34vw" className="portrait"/><p className="portrait-caption">Design-minded.<br/>Product-driven.</p></div></section><SelectedWork/><PortfolioAbout/><section id="contact" className="section contact"><h2>Let’s build<br/>something <em>useful.</em></h2><div><p>Have a product to build, an interface to improve, or an engineering role in mind?</p><a className="contact-email" href="mailto:contact@jayzhou.work">contact@jayzhou.work <Arrow/></a><p className="contact-note">Email opens your preferred mail app.</p><div className="social-links"><a href="https://github.com/JZilla808" target="_blank" rel="noopener noreferrer">GitHub <Arrow/></a><a href="https://www.linkedin.com/in/jay-zhou-1016832ba/" target="_blank" rel="noopener noreferrer">LinkedIn <Arrow/></a><a href="/resume">Résumé <Arrow/></a></div></div></section></main><footer><p>© {new Date().getFullYear()} Jay Zhou</p><p>Built with care, in California.</p><a href="#top">Back to top <Arrow/></a></footer></div></>}
