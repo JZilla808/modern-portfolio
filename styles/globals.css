@@ -27,10 +27,14 @@
   --text: #20231f;
   --muted: #62645d;
   --line: #d8d6ce;
-  --accent: #b83d20;
+  --accent: #f8f676;
+  --accent-text: #4f4d00;
+  --dot-ring: #171b18;
   --surface: #e8e6df;
-  --button-text: #fff;
-  --focus: #a8381e;
+  --button-text: #171b18;
+  --action-border: #171b18;
+  --focus-outer: #171b18;
+  --focus-inner: #f8f676;
   color-scheme: light;
 }
 html[data-theme="dark"] {
@@ -38,10 +42,14 @@ html[data-theme="dark"] {
   --text: #f2f1e9;
   --muted: #b7bcb4;
   --line: #3e4640;
-  --accent: #ff9874;
+  --accent: #f8f676;
+  --accent-text: #f8f676;
+  --dot-ring: transparent;
   --surface: #252d27;
-  --button-text: #171b18;
-  --focus: #ff9874;
+  --button-text: #20231f;
+  --action-border: #171b18;
+  --focus-outer: #f8f676;
+  --focus-inner: #171b18;
   color-scheme: dark;
 }
 * {
@@ -61,7 +69,7 @@ body {
 }
 ::selection {
   background: var(--accent);
-  color: var(--bg);
+  color: var(--button-text);
 }
 a {
   color: inherit;
@@ -81,11 +89,13 @@ button {
   font: inherit;
 }
 a:hover {
-  color: var(--accent);
+  color: var(--accent-text);
 }
+/* Two-tone ring: an inner band inside an outer line, readable on light, dark and yellow fills. */
 :focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 6px;
+  outline: 2px solid var(--focus-outer);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--focus-inner);
 }
 img,
 video {
@@ -115,7 +125,7 @@ h3 {
 }
 em {
   font-weight: 400;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .site-shell {
   max-width: 1440px;
@@ -136,7 +146,17 @@ em {
   font-weight: 700;
 }
 .wordmark span {
-  color: var(--accent);
+  /* Period drawn as a dot on the text baseline (overflow:hidden puts the box bottom on the baseline). */
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-left: 2px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 1px var(--dot-ring);
+  font-size: 0;
+  vertical-align: baseline;
 }
 .navigation {
   display: flex;
@@ -160,6 +180,7 @@ em {
   border: 1px solid var(--line);
   border-radius: 50%;
   color: var(--text);
+  transition: transform 0.2s;
   width: 44px;
   height: 44px;
   padding: 11px;
@@ -167,8 +188,20 @@ em {
   place-items: center;
 }
 .icon-button:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  background: var(--accent);
+  border-color: var(--action-border);
+  color: var(--button-text);
+}
+.icon-button:active {
+  transform: scale(0.94);
+  box-shadow: inset 0 0 0 2px var(--action-border);
+}
+.icon-button:disabled {
+  background: none;
+  border-color: var(--line);
+  color: var(--muted);
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 .icon-button svg {
   width: 20px;
@@ -217,14 +250,30 @@ em {
   gap: 28px;
   background: var(--accent);
   color: var(--button-text);
-  padding: 15px 22px;
+  padding: 14px 21px;
+  border: 1px solid var(--action-border);
   font-size: 15px;
   border-radius: 3px;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .button:hover {
   color: var(--button-text);
   transform: translateY(-2px);
+  box-shadow: 0 3px 0 var(--action-border);
+}
+.button:active {
+  transform: translateY(0);
+  box-shadow: inset 0 0 0 2px var(--action-border);
+}
+.button[aria-disabled="true"] {
+  background: var(--surface);
+  border-style: dashed;
+  border-color: var(--line);
+  color: var(--muted);
+  box-shadow: none;
+  transform: none;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 .text-link {
   display: inline-flex;
@@ -256,7 +305,7 @@ em {
   line-height: 1.13;
   padding: 17px 23px;
   background: var(--bg);
-  color: var(--accent);
+  color: var(--accent-text);
   transform: rotate(-6deg);
 }
 .section {
@@ -347,7 +396,7 @@ summary::-webkit-details-marker {
   justify-content: space-between;
   padding: 15px 0;
   font-size: 15px;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 details[open] > summary > span:last-child {
   transform: rotate(45deg);
@@ -382,6 +431,7 @@ details[open] > summary > span:last-child {
 .recorded-demo-overlay,
 .recorded-demo-status {
   position: absolute;
+  z-index: 1;
   inset: 0 0 56px;
   display: flex;
   flex-direction: column;
@@ -411,28 +461,46 @@ details[open] > summary > span:last-child {
   align-items: center;
   gap: 12px;
   min-height: 56px;
-  padding: 0 28px 0 20px;
-  border: 0;
+  padding: 0 27px 0 19px;
+  border: 1px solid var(--action-border);
   border-radius: 999px;
   background: var(--accent);
   color: var(--button-text);
   font-size: 16px;
   font-weight: 700;
+  transition: transform 0.18s ease;
 }
 .recorded-demo-play {
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
-  transition: transform 0.18s ease;
 }
-.recorded-demo-play:hover {
+.recorded-demo-play:hover,
+.recorded-demo-status button:hover {
   transform: scale(1.04);
+  box-shadow: 0 0 0 2px var(--action-border), 0 8px 28px rgba(0, 0, 0, 0.28);
+}
+.recorded-demo-play:active,
+.recorded-demo-status button:active {
+  transform: scale(0.98);
+  box-shadow: inset 0 0 0 2px var(--action-border);
 }
 .recorded-demo-play:focus-visible,
 .recorded-demo-status button:focus-visible {
-  outline-offset: 4px;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--focus-inner);
+}
+.recorded-demo-play:disabled,
+.recorded-demo-status button:disabled {
+  background: var(--surface);
+  border-style: dashed;
+  border-color: var(--line);
+  color: var(--muted);
+  box-shadow: none;
+  transform: none;
+  cursor: not-allowed;
 }
 .recorded-demo-status button {
   min-height: 44px;
-  padding: 0 22px;
+  padding: 0 21px;
   font-size: 14px;
 }
 .recorded-demo-play svg {
@@ -442,7 +510,7 @@ details[open] > summary > span:last-child {
 }
 .recorded-demo-compact .recorded-demo-play {
   min-height: 44px;
-  padding: 0 20px 0 14px;
+  padding: 0 19px 0 13px;
   font-size: 14px;
 }
 .recorded-demo-compact .recorded-demo-play svg {
@@ -527,7 +595,7 @@ details[open] > summary > span:last-child {
   line-height: 1.35;
 }
 .experience-row .role {
-  color: var(--accent);
+  color: var(--accent-text);
   font-size: 15px;
   margin-top: 7px;
 }
@@ -652,7 +720,8 @@ footer a {
   top: -80px;
   background: var(--accent);
   color: var(--button-text);
-  padding: 12px;
+  border: 1px solid var(--action-border);
+  padding: 11px;
   z-index: 20;
 }
 .skip-link:focus {
@@ -758,7 +827,7 @@ footer a {
     flex-wrap: wrap;
   }
   .button {
-    padding: 14px 18px;
+    padding: 13px 17px;
     gap: 20px;
   }
   .portrait-composition {
@@ -922,6 +991,8 @@ footer a {
     --text: #111;
     --muted: #444;
     --accent: #111;
+    --accent-text: #111;
+    --dot-ring: transparent;
     --line: #aaa;
   }
   body {
@@ -947,7 +1018,7 @@ footer a {
 .resume-subtitle {
   font-size: 23px;
   margin: 15px 0 !important;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .resume-actions {
   display: flex;
