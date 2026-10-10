@@ -19,7 +19,7 @@ export default function Resume() {
           <h1>Jay Zhou</h1>
           <p className="resume-subtitle">Frontend &amp; AI Product Engineer</p>
           <p>
-            Rosemead, CA · English &amp; Mandarin
+            Los Angeles, California · English &amp; Mandarin
             <br />
             <a href="mailto:contact@jayzhou.work">
               contact@jayzhou.work

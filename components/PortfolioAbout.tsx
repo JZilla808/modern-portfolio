@@ -44,7 +44,7 @@ export default function PortfolioAbout() {
         </h2>
         <div>
           <p>
-            I’m Jay, a frontend and AI product engineer based in Rosemead,
+            I’m Jay, a frontend and AI product engineer based in Los Angeles,
             California. I work across design and development to turn ideas into
             clear, usable web experiences.
           </p>
@@ -53,7 +53,7 @@ export default function PortfolioAbout() {
             tools as part of an iterative process: prototype, inspect, refine
             and ship. The interface still has to earn its place.
           </p>
-          <p className="about-meta">Rosemead, CA · English & Mandarin</p>
+          <p className="about-meta">Los Angeles, California · English & Mandarin</p>
           <Link className="text-link" href="/resume">
             View engineering résumé <Arrow />
           </Link>
