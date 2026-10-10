@@ -30,7 +30,6 @@
   --accent: #f8f676;
   --accent-text: #f8f676;
   --accent-ink: #171b18;
-  --accent-stroke: clamp(1px, 0.02em, 2px);
   --caption-bg: #171b18;
   --plain-hover: #20231f;
   --dot-ring: #171b18;
@@ -49,7 +48,6 @@ html[data-theme="dark"] {
   --accent: #f8f676;
   --accent-text: #f8f676;
   --accent-ink: transparent;
-  --accent-stroke: 0px;
   --caption-bg: #171b18;
   --plain-hover: #f8f676;
   --dot-ring: transparent;
@@ -99,12 +97,7 @@ button {
 a:hover {
   color: var(--accent-text);
 }
-/* Exact lemon text on the pale light theme: large em gets a deep-ink outline painted behind the fill, small labels get a compact ink backing. All of it is transparent in dark and print. */
-em {
-  -webkit-text-stroke: var(--accent-stroke) var(--accent-ink);
-  paint-order: stroke fill;
-  stroke-linejoin: round;
-}
+/* Keep compact ink backing on small lemon labels in light; transparent in dark and print. */
 .experience-row .role,
 .resume-subtitle {
   width: fit-content;
@@ -1030,7 +1023,6 @@ footer a {
     --accent: #111;
     --accent-text: #111;
     --accent-ink: transparent;
-    --accent-stroke: 0px;
     --caption-bg: #fff;
     --plain-hover: #111;
     --dot-ring: transparent;
