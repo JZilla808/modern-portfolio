@@ -1,0 +1,1910 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "initial": [
+        {
+          "name": "Fayva recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        }
+      ],
+      "clips": [
+        {
+          "name": "Fayva recorded demonstration",
+          "first": {
+            "time": 0.12238,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.268329,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "first": {
+            "time": 0.12993,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.274039,
+            "paused": false
+          }
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "first": {
+            "time": 0.134934,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.279563,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "first": {
+            "time": 0.113624,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.258602,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "first": {
+            "time": 0.131943,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.278089,
+            "paused": false
+          }
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "first": {
+            "time": 0.12046,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.265025,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "first": {
+            "time": 0.115906,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.264118,
+            "paused": false
+          }
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "first": {
+            "time": 0.125154,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.269552,
+            "paused": false
+          }
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "first": {
+            "time": 0.118112,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.263566,
+            "paused": false
+          }
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "first": {
+            "time": 0.113804,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.258938,
+            "paused": false
+          }
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "first": {
+            "time": 0.121748,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.267525,
+            "paused": false
+          }
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "first": {
+            "time": 0.120089,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.265923,
+            "paused": false
+          }
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "initial": [
+        {
+          "name": "Fayva recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        }
+      ],
+      "clips": [
+        {
+          "name": "Fayva recorded demonstration",
+          "first": {
+            "time": 0.132975,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.281642,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "first": {
+            "time": 0.132045,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.276556,
+            "paused": false
+          }
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "first": {
+            "time": 0.128359,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.273234,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "first": {
+            "time": 0.113207,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.258049,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "first": {
+            "time": 0.130343,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.276297,
+            "paused": false
+          }
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "first": {
+            "time": 0.117307,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.261806,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "first": {
+            "time": 0.133532,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.278744,
+            "paused": false
+          }
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "first": {
+            "time": 0.132494,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.277117,
+            "paused": false
+          }
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "first": {
+            "time": 0.116893,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.26104,
+            "paused": false
+          }
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "first": {
+            "time": 0.129495,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.275681,
+            "paused": false
+          }
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "first": {
+            "time": 0.131326,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.276331,
+            "paused": false
+          }
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "first": {
+            "time": 0.114278,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.258045,
+            "paused": false
+          }
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "theme": "light",
+      "initial": [
+        {
+          "name": "Fayva recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        }
+      ],
+      "clips": [
+        {
+          "name": "Fayva recorded demonstration",
+          "first": {
+            "time": 0.13263,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.281543,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "first": {
+            "time": 0.124343,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.269104,
+            "paused": false
+          }
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "first": {
+            "time": 0.135711,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.280769,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "first": {
+            "time": 0.13367,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.2788,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "first": {
+            "time": 0.131273,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.276529,
+            "paused": false
+          }
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "first": {
+            "time": 0.111875,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.257678,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "first": {
+            "time": 0.131705,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.277243,
+            "paused": false
+          }
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "first": {
+            "time": 0.132812,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.278453,
+            "paused": false
+          }
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "first": {
+            "time": 0.123657,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.268327,
+            "paused": false
+          }
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "first": {
+            "time": 0.12848,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.272827,
+            "paused": false
+          }
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "first": {
+            "time": 0.115701,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.259672,
+            "paused": false
+          }
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "first": {
+            "time": 0.116789,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.263407,
+            "paused": false
+          }
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "theme": "dark",
+      "initial": [
+        {
+          "name": "Fayva recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        }
+      ],
+      "clips": [
+        {
+          "name": "Fayva recorded demonstration",
+          "first": {
+            "time": 0.131192,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.276355,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "first": {
+            "time": 0.134317,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.279699,
+            "paused": false
+          }
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "first": {
+            "time": 0.137725,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.281375,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "first": {
+            "time": 0.120054,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.265087,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "first": {
+            "time": 0.118803,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.263972,
+            "paused": false
+          }
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "first": {
+            "time": 0.116081,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.261401,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "first": {
+            "time": 0.133556,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.279367,
+            "paused": false
+          }
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "first": {
+            "time": 0.130545,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.274151,
+            "paused": false
+          }
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "first": {
+            "time": 0.122098,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.265239,
+            "paused": false
+          }
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "first": {
+            "time": 0.131916,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.277547,
+            "paused": false
+          }
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "first": {
+            "time": 0.128605,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.27386,
+            "paused": false
+          }
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "first": {
+            "time": 0.122612,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.267825,
+            "paused": false
+          }
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "initial": [
+        {
+          "name": "Fayva recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        }
+      ],
+      "clips": [
+        {
+          "name": "Fayva recorded demonstration",
+          "first": {
+            "time": 0.133645,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.280391,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "first": {
+            "time": 0.126394,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.271294,
+            "paused": false
+          }
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "first": {
+            "time": 0.138252,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.283993,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "first": {
+            "time": 0.123922,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.267908,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "first": {
+            "time": 0.120636,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.26492,
+            "paused": false
+          }
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "first": {
+            "time": 0.113459,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.25717,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "first": {
+            "time": 0.12158,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.267181,
+            "paused": false
+          }
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "first": {
+            "time": 0.115087,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.260074,
+            "paused": false
+          }
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "first": {
+            "time": 0.118314,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.263735,
+            "paused": false
+          }
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "first": {
+            "time": 0.108402,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.254173,
+            "paused": false
+          }
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "first": {
+            "time": 0.119919,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.264304,
+            "paused": false
+          }
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "first": {
+            "time": 0.109455,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.25288,
+            "paused": false
+          }
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "initial": [
+        {
+          "name": "Fayva recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        }
+      ],
+      "clips": [
+        {
+          "name": "Fayva recorded demonstration",
+          "first": {
+            "time": 0.110025,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.256179,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "first": {
+            "time": 0.131891,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.276739,
+            "paused": false
+          }
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "first": {
+            "time": 0.124247,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.269058,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "first": {
+            "time": 0.128195,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.273262,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "first": {
+            "time": 0.12038,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.26558,
+            "paused": false
+          }
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "first": {
+            "time": 0.115133,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.260061,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "first": {
+            "time": 0.129161,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.275109,
+            "paused": false
+          }
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "first": {
+            "time": 0.125962,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.269777,
+            "paused": false
+          }
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "first": {
+            "time": 0.119213,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.262867,
+            "paused": false
+          }
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "first": {
+            "time": 0.124219,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.270107,
+            "paused": false
+          }
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "first": {
+            "time": 0.11104,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.255412,
+            "paused": false
+          }
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "first": {
+            "time": 0.131004,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.276963,
+            "paused": false
+          }
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "theme": "light",
+      "initial": [
+        {
+          "name": "Fayva recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        }
+      ],
+      "clips": [
+        {
+          "name": "Fayva recorded demonstration",
+          "first": {
+            "time": 0.102907,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.247003,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "first": {
+            "time": 0.121223,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.266027,
+            "paused": false
+          }
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "first": {
+            "time": 0.137095,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.281417,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "first": {
+            "time": 0.131218,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.276922,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "first": {
+            "time": 0.120212,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.265542,
+            "paused": false
+          }
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "first": {
+            "time": 0.116074,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.261347,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "first": {
+            "time": 0.115279,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.26234,
+            "paused": false
+          }
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "first": {
+            "time": 0.133137,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.279201,
+            "paused": false
+          }
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "first": {
+            "time": 0.122749,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.266658,
+            "paused": false
+          }
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "first": {
+            "time": 0.127422,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.272017,
+            "paused": false
+          }
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "first": {
+            "time": 0.116697,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.26117,
+            "paused": false
+          }
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "first": {
+            "time": 0.115132,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.259536,
+            "paused": false
+          }
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "theme": "dark",
+      "initial": [
+        {
+          "name": "Fayva recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "paused": true,
+          "time": 0,
+          "controls": true,
+          "inline": true,
+          "preload": "none"
+        }
+      ],
+      "clips": [
+        {
+          "name": "Fayva recorded demonstration",
+          "first": {
+            "time": 0.130386,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.275639,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChaseGPT recorded demonstration",
+          "first": {
+            "time": 0.1316,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.278396,
+            "paused": false
+          }
+        },
+        {
+          "name": "FlippyHop recorded demonstration",
+          "first": {
+            "time": 0.137807,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.282107,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Image Generator recorded demonstration",
+          "first": {
+            "time": 0.123957,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.268697,
+            "paused": false
+          }
+        },
+        {
+          "name": "ChuneSpot recorded demonstration",
+          "first": {
+            "time": 0.121487,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.266289,
+            "paused": false
+          }
+        },
+        {
+          "name": "Tweepia recorded demonstration",
+          "first": {
+            "time": 0.131351,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.275672,
+            "paused": false
+          }
+        },
+        {
+          "name": "AI Weather App recorded demonstration",
+          "first": {
+            "time": 0.13101,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.279448,
+            "paused": false
+          }
+        },
+        {
+          "name": "NG Flix recorded demonstration",
+          "first": {
+            "time": 0.133542,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.279356,
+            "paused": false
+          }
+        },
+        {
+          "name": "SpaceX Study recorded demonstration",
+          "first": {
+            "time": 0.122797,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.267701,
+            "paused": false
+          }
+        },
+        {
+          "name": "Instagram Study recorded demonstration",
+          "first": {
+            "time": 0.116865,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.262813,
+            "paused": false
+          }
+        },
+        {
+          "name": "Go Bookings recorded demonstration",
+          "first": {
+            "time": 0.116,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.261188,
+            "paused": false
+          }
+        },
+        {
+          "name": "Supabolo recorded demonstration",
+          "first": {
+            "time": 0.121645,
+            "paused": false
+          },
+          "resume": {
+            "time": 0.265677,
+            "paused": false
+          }
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "failures": []
+}

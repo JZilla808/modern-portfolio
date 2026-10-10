@@ -1,0 +1,34 @@
+{
+  "keyboardEnter": {
+    "time": 0.12119,
+    "paused": false
+  },
+  "keyboardSpace": {
+    "time": 0.121568,
+    "paused": false
+  },
+  "continuity": {
+    "same": true,
+    "time": 0.605862,
+    "before": 0.122665,
+    "paused": false
+  },
+  "nativePause": true,
+  "nativeResume": {
+    "time": 1.348679,
+    "paused": false
+  },
+  "errorState": {
+    "phase": "error",
+    "text": "This recording could not be played.\nTry again"
+  },
+  "retry": {
+    "time": 0.149425,
+    "paused": false
+  },
+  "reducedMotion": "0s",
+  "errors": [],
+  "failures": [
+    ""
+  ]
+}

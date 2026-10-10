@@ -1,8 +1,7 @@
-/** Product evidence stays static until a visitor deliberately plays a recorded demo. */
-import { useState } from "react";
-import Image from "next/image";
+/** Every project shows its recorded demo inline; nothing loads or plays until a visitor presses play. */
 import { projects, archive } from "../data/portfolio";
 import { Arrow } from "./PortfolioHeader";
+import RecordedDemo from "./RecordedDemo";
 export default function SelectedWork() {
   return (
     <section id="work" className="section work">
@@ -18,14 +17,6 @@ export default function SelectedWork() {
       {projects.map((project) => (
         <article className="project" key={project.name}>
           <div className="project-media">
-            <Image
-              src={`/project_stills/${project.image}.jpg`}
-              width={1200}
-              height={750}
-              alt={`${project.name} application interface`}
-              sizes="(max-width: 760px) 100vw, 55vw"
-              className="project-image"
-            />
             <RecordedDemo name={project.name} image={project.image} />
           </div>
           <div className="project-copy">
@@ -58,23 +49,18 @@ export default function SelectedWork() {
                 </dl>
               </div>
             </details>
-            <a
-              href={
-                project.name === "FlippyHop"
-                  ? project.url
-                  : `/project_thumbnails/${project.image}.mp4`
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-link"
-            >
-              {project.name === "FlippyHop"
-                ? "Play FlippyHop"
-                : "Open recorded demo"}
-              <Arrow />
-              <span className="sr-only"> (opens in new tab)</span>
-            </a>
-            {project.name !== "FlippyHop" && (
+            {project.name === "FlippyHop" ? (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-link"
+              >
+                Play FlippyHop
+                <Arrow />
+                <span className="sr-only"> (opens in new tab)</span>
+              </a>
+            ) : (
               <p className="availability">
                 Live site unavailable at review; this recording preserves the
                 work.
@@ -92,21 +78,9 @@ export default function SelectedWork() {
         <div className="archive-grid">
           {archive.map(([name, description, image, url]) => (
             <article key={name}>
-              <Image
-                src={`/project_stills/${image}.jpg`}
-                alt={`${name} interface preview`}
-                width={600}
-                height={375}
-                sizes="(max-width: 760px) 90vw, 30vw"
-              />
+              <RecordedDemo name={name} image={image} compact />
               <h3>{name}</h3>
               <p>{description}</p>
-              <a
-                className="archive-recording"
-                href={`/project_thumbnails/${image}.mp4`}
-              >
-                Recorded demo <Arrow />
-              </a>
               {url ? (
                 <a href={url} target="_blank" rel="noopener noreferrer">
                   Original deployment <Arrow />
@@ -118,31 +92,5 @@ export default function SelectedWork() {
         </div>
       </details>
     </section>
-  );
-}
-
-function RecordedDemo({ name, image }: { name: string; image: string }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <details
-      className="demo-disclosure"
-      onToggle={(event) => setOpen(event.currentTarget.open)}
-    >
-      <summary aria-label={`Watch ${name} recorded demo`}>
-        Watch recorded demo
-      </summary>
-      {open && (
-        <video
-          controls
-          playsInline
-          preload="none"
-          poster={`/project_stills/${image}.jpg`}
-          aria-label={`${name} recorded demonstration`}
-        >
-          <source src={`/project_thumbnails/${image}.mp4`} type="video/mp4" />
-          Your browser does not support video.
-        </video>
-      )}
-    </details>
   );
 }
