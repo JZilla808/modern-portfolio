@@ -1,0 +1,16 @@
+[
+  {
+    "theme": "light",
+    "fg": "rgb(17, 17, 17)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "stroke": "0px",
+    "shadow": "rgba(0, 0, 0, 0) -3px 0px 0px 0px, rgba(0, 0, 0, 0) 3px 0px 0px 0px"
+  },
+  {
+    "theme": "dark",
+    "fg": "rgb(17, 17, 17)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "stroke": "0px",
+    "shadow": "rgba(0, 0, 0, 0) -3px 0px 0px 0px, rgba(0, 0, 0, 0) 3px 0px 0px 0px"
+  }
+]

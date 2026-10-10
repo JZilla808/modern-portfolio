@@ -28,7 +28,11 @@
   --muted: #62645d;
   --line: #d8d6ce;
   --accent: #f8f676;
-  --accent-text: #4f4d00;
+  --accent-text: #f8f676;
+  --accent-ink: #171b18;
+  --accent-stroke: clamp(1px, 0.02em, 2px);
+  --caption-bg: #171b18;
+  --plain-hover: #20231f;
   --dot-ring: #171b18;
   --surface: #e8e6df;
   --button-text: #171b18;
@@ -44,6 +48,10 @@ html[data-theme="dark"] {
   --line: #3e4640;
   --accent: #f8f676;
   --accent-text: #f8f676;
+  --accent-ink: transparent;
+  --accent-stroke: 0px;
+  --caption-bg: #171b18;
+  --plain-hover: #f8f676;
   --dot-ring: transparent;
   --surface: #252d27;
   --button-text: #20231f;
@@ -90,6 +98,35 @@ button {
 }
 a:hover {
   color: var(--accent-text);
+}
+/* Exact lemon text on the pale light theme: large em gets a deep-ink outline painted behind the fill, small labels get a compact ink backing. All of it is transparent in dark and print. */
+em {
+  -webkit-text-stroke: var(--accent-stroke) var(--accent-ink);
+  paint-order: stroke fill;
+  stroke-linejoin: round;
+}
+.experience-row .role,
+.resume-subtitle {
+  width: fit-content;
+}
+.experience-row .role,
+.resume-subtitle,
+.case-notes-label,
+a:hover:not(.button, .icon-button, .skip-link, .wordmark) {
+  background: var(--accent-ink);
+  box-shadow: -3px 0 0 var(--accent-ink), 3px 0 0 var(--accent-ink);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.case-notes-label {
+  align-self: center;
+  line-height: 1.3;
+}
+.wordmark:hover {
+  color: var(--plain-hover);
+}
+.skip-link:hover {
+  color: var(--button-text);
 }
 /* Two-tone ring: an inner band inside an outer line, readable on light, dark and yellow fills. */
 :focus-visible {
@@ -304,7 +341,7 @@ em {
   font-size: 28px;
   line-height: 1.13;
   padding: 17px 23px;
-  background: var(--bg);
+  background: var(--caption-bg);
   color: var(--accent-text);
   transform: rotate(-6deg);
 }
@@ -992,6 +1029,10 @@ footer a {
     --muted: #444;
     --accent: #111;
     --accent-text: #111;
+    --accent-ink: transparent;
+    --accent-stroke: 0px;
+    --caption-bg: #fff;
+    --plain-hover: #111;
     --dot-ring: transparent;
     --line: #aaa;
   }

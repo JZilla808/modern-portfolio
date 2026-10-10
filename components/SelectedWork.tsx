@@ -34,7 +34,8 @@ export default function SelectedWork() {
             </ul>
             <details className="case-notes">
               <summary aria-label={`Read ${project.name} case notes`}>
-                Read case notes <span aria-hidden="true">+</span>
+                <span className="case-notes-label">Read case notes</span>
+                <span aria-hidden="true">+</span>
               </summary>
               <div>
                 <dl>
